@@ -4,7 +4,8 @@ import Head from 'next/head'
 import { withStyles } from '@material-ui/core/styles';
 import {Button} from '@material-ui/core'
 import { green } from '@material-ui/core/colors';
-import Footer from './Footer'
+import Footer from './Footer';
+import {buttons} from '../store/buttons'
 
 type Props = {
   children?: ReactNode
@@ -35,15 +36,11 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <header>
       <nav>
-        <Link href="/" passHref>
-          <BootstrapButton variant = "outlined" color="primary">Home</BootstrapButton>
-        </Link>
-        <Link href="/give" passHref>
-          <BootstrapButton variant = "outlined" color="primary">Give</BootstrapButton>
-        </Link>
-        <Link href="/info" passHref>
-          <BootstrapButton variant = "outlined" color="primary">Info</BootstrapButton>
-        </Link>
+        {buttons.map(button => (
+                  <Link key={button.id} href={button.url} passHref>
+                  <BootstrapButton variant = "outlined" color="primary">{button.name}</BootstrapButton>
+                </Link>
+        ))}
       </nav>
     </header>
     {children}
