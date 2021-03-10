@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout is rendered correctly 1`] = `
+Array [
+  <header>
+    <nav>
+      <a
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-1 MuiButton-outlined MuiButton-outlinedPrimary"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label"
+        >
+          home
+        </span>
+      </a>
+      <a
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-1 MuiButton-outlined MuiButton-outlinedPrimary"
+        href="/info"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label"
+        >
+          info
+        </span>
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="MuiBox-root MuiBox-root-2"
+  />,
+  <footer>
+    <header
+      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorDefault makeStyles-appBar-3 mui-fixed MuiPaper-elevation4"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-5"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-6"
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            Fund:
+            <span
+              className="makeStyles-span-4"
+            >
+              ₿0.71522656
+            </span>
+             
+          </p>
+        </div>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            className="makeStyles-span-4"
+          >
+            bitcoin
+          </span>
+          mission©2021
+        </p>
+      </div>
+    </header>
+  </footer>,
+]
+`;

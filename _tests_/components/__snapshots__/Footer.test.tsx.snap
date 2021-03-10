@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer is rendered correctly 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorDefault makeStyles-appBar-1 mui-fixed MuiPaper-elevation4"
+>
+  <div
+    className="MuiBox-root MuiBox-root-3"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-4"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+        Fund:
+        <span
+          className="makeStyles-span-2"
+        >
+          ₿0.71522656
+        </span>
+         
+      </p>
+    </div>
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      <span
+        className="makeStyles-span-2"
+      >
+        bitcoin
+      </span>
+      mission©2021
+    </p>
+  </div>
+</header>
+`;
