@@ -5,9 +5,4 @@ export const buttons = [{
     id: uuidv4(),
     name: "home",
     url: "/"
-},
-{
-    id: uuidv4(),
-    name: "info",
-    url: "/info"
 }]
