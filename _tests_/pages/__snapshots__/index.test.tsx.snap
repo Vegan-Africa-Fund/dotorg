@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer is rendered correctly 1`] = `
+exports[`Index page is rendered correctly 1`] = `
 Array [
   <header>
     <nav>
@@ -27,31 +27,6 @@ Array [
           className="MuiButton-label"
         >
           home
-        </span>
-      </a>
-      <a
-        aria-disabled={false}
-        className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-1 MuiButton-outlined MuiButton-outlinedPrimary"
-        href="/info"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-      >
-        <span
-          className="MuiButton-label"
-        >
-          info
         </span>
       </a>
     </nav>
