@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { withStyles } from '@material-ui/core/styles';
 import {Button, Box} from '@material-ui/core'
-import { green } from '@material-ui/core/colors';
 import Footer from './Footer';
 import {buttons} from '../store/buttons'
 
@@ -15,17 +14,7 @@ type Props = {
 const BootstrapButton = withStyles({
   root: {
     margin: "0.6rem 0.3rem 0 0.3rem",
-    textTransform: "none",
     fontSize: "1.2rem",
-    border: "2px solid #2ecc71",
-    '&:hover': {
-      backgroundColor: green[500],
-      color: "#fff"
-    },
-    '&:focus': {
-      border: '2px solid',
-      borderColor: "#fff"
-    },
   }
 })(Button);
 
@@ -49,7 +38,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <Box
     width="75%"
     mx="auto"
-    lineHeight={3}
+    lineHeight={4}
     mb="4rem"
     >
     {children}
