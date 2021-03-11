@@ -21,8 +21,8 @@ const Footer = () => {
             display="flex"
             ml={1}
             fontSize="0.44rem">
-                <Box flexGrow={0.9}><Typography>Fund:<span className={classes.span}>₿0.71522656</span> </Typography></Box>
-                <Typography><span className={classes.span}>bitcoin</span>mission©2021</Typography>
+                <Box flexGrow={0.9}><Typography>Blobject:<span className={classes.span}>blobject</span> </Typography></Box>
+                <Typography><span className={classes.span}>blobject</span>©2021</Typography>
             </Box>
         </AppBar>
     )
