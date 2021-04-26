@@ -78,10 +78,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
       </Box>
     </header>
     <Box
-    width="75%"
-    mx="auto"
-    lineHeight={4}
-    mb="4rem"
+    mb="2rem"
     >
     {children}
     </Box>
