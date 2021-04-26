@@ -1,6 +1,6 @@
 # Project Name
 
-- Blobject website template.
+- Vegan Africa
 
 ## Built With
 
