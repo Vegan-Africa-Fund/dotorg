@@ -78,7 +78,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
       </Box>
     </header>
     <Box
-    mb="2rem"
+    mb="4rem"
     >
     {children}
     </Box>
