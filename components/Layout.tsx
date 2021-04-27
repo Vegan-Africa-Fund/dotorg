@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Menu, IconButton, MenuItem} from '@material-ui/core'
+import { Box, Menu, IconButton, MenuItem, Button} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import Footer from './Footer';
 
@@ -16,19 +16,50 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     width: "100%",
     justifyContent: "space-around",
-    [theme.breakpoints.down('sm')] : {
-      display: "none"
-    },
     '& h4': {
       borderLeft: "1px solid black",
-      width: "25%",
+      width: "10%",
       textAlign: "center",
-      fontSize: "1.2rem",
-      fontWeight: "400"
+      fontSize: "1rem",
+      fontWeight: "400",
+      lineHeight: "3.5",
+      [theme.breakpoints.down('sm')] : {
+        display: "none"
+      }
     },
     '& h4:first-child': {
       borderLeft: "0"
+    },
+    '& div' : {
+      width: "20%",
+      textAlign: "center",
+      '& p:first-child': {
+        fontFamily: "MoonTime",
+        fontSize: "4rem",
+        margin: "0",
+        [theme.breakpoints.down('sm')] : {
+          fontSize: "2.5rem"
+        }
+      },
+      '& p:nth-child(2)': {
+        margin: "0",
+        fontSize: "1.5rem",
+        fontWeight: "600",
+        position: "relative",
+        bottom: "1.4rem",
+        right: "0.5rem",
+        letterSpacing: "3px",
+        [theme.breakpoints.down('sm')] : {
+          fontSize: "1rem",
+          right: "0.3rem"
+        }
+      }
     }
+  },
+  button : {
+    backgroundColor: "#000",
+    color: "#fff",
+    borderRadius: "2rem"
   }
 }))
 
@@ -54,28 +85,37 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
     </Head>
     <header>
       <nav className= {classes.nav}>
-        <Link href="#"><h4>Current Projects</h4></Link>
+        <Box display={{ xs: 'block', md: 'none' }}>
+        <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+          <MenuIcon fontSize="large"/>
+        </IconButton>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Current Projects</MenuItem>
+          <MenuItem onClick={handleClose}>Blog</MenuItem>
+          <MenuItem onClick={handleClose}>Proposed Projects</MenuItem>
+          <MenuItem onClick={handleClose}>Donate</MenuItem>
+        </Menu>
+        </Box>
+        <Link href="#"><h4>Home</h4></Link>
         <Link href="#"><h4>Blog</h4></Link>
-        <Link href="#"><h4>Proposed Projects</h4></Link>
+        <Link href="#"><h4>Guides</h4></Link>
+        <div>
+          <Link href="#"><p>Vegan</p></Link>
+          <Link href="#"><p>A F</p></Link>
+          </div>
+        <Link href="#"><h4>Try Vegan</h4></Link>
         <Link href="#"><h4>Donate</h4></Link>
+        <Link href="#"><h4>About</h4></Link>
+        <Box display={{ xs: 'block', md: 'none' }} mt="0.9rem">
+          <Button className= {classes.button}>Contribute</Button>
+        </Box>
       </nav>
-      <Box display={{ xs: 'block', md: 'none' }}>
-      <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <MenuIcon fontSize="large"/>
-      </IconButton>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Current Projects</MenuItem>
-        <MenuItem onClick={handleClose}>Blog</MenuItem>
-        <MenuItem onClick={handleClose}>Proposed Projects</MenuItem>
-        <MenuItem onClick={handleClose}>Donate</MenuItem>
-      </Menu>
-      </Box>
     </header>
     <Box
     mb="4rem"
