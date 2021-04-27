@@ -6,3 +6,8 @@ html, body {
     min-height: 100%;
     overflow-y: auto;
 }
+
+@font-face {
+    font-family: "MoonTime";
+    src: url("/fonts/moontime.ttf")
+}

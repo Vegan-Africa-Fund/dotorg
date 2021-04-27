@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Typography, Box} from '@material-ui/core'
+import {Typography, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -7,7 +7,13 @@ const useStyles = makeStyles(theme => ({
         width: "70%",
         margin: "auto",
         fontSize: "1.5rem",
-        padding: "1rem 0"
+        padding: "1rem 0",
+        textAlign: "center",
+        [theme.breakpoints.down('sm')] : {
+            textAlign: "left",
+            fontSize: "1.2rem",
+            width: "100%"
+        }
     },
 
     button: {
@@ -20,6 +26,13 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('xs')] : {
             width: "50%"
         }
+    },
+
+    title: {
+        fontFamily: "MoonTime",
+        [theme.breakpoints.down('sm')] : {
+            display: "none"
+        } 
     }
 }))
 
@@ -28,12 +41,12 @@ const Mission = () => {
     const classes = useStyles();
     return (
         <Box bgcolor="#388e3c" width="80%" p="1rem" display="flex" alignItems="flex-end">
-                <Typography className={classes.content} variant="body2" align="center">
+                <Typography className={classes.content} variant="body2">
                     A vegan lifestyle can support incredible health and protect huge numbers of animals, while
                     simultaneously combating climate change. Plus, the food is insanely delicious and becomes more widely
                     available every year.
                 </Typography>
-                <Typography variant="h3" align="center">Our Mission</Typography>
+                <Typography className={classes.title} variant="h3" align="center">Our Mission</Typography>
         </Box>
     )
 }
