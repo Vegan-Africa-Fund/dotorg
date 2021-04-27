@@ -8,9 +8,7 @@ const useStyles = makeStyles(theme => ({
         margin: "auto",
         fontSize: "1.5rem",
         padding: "1rem 0",
-        textAlign: "center",
         [theme.breakpoints.down('sm')] : {
-            textAlign: "left",
             fontSize: "1.2rem",
             width: "100%"
         }
@@ -42,9 +40,7 @@ const Mission = () => {
     return (
         <Box bgcolor="#388e3c" width="80%" p="1rem" display="flex" alignItems="flex-end">
                 <Typography className={classes.content} variant="body2">
-                    A vegan lifestyle can support incredible health and protect huge numbers of animals, while
-                    simultaneously combating climate change. Plus, the food is insanely delicious and becomes more widely
-                    available every year.
+                Our mission is to educate, encourage and diversify veganism while inspiring and supporting Africans to try veganism by building community, raising awareness, supporting vegan businesses, and expanding vegan food options in restaurants.
                 </Typography>
                 <Typography className={classes.title} variant="h3" align="center">Our Mission</Typography>
         </Box>

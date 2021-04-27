@@ -1,8 +1,10 @@
+import React from 'react'
 import {Grid, Paper, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import Layout from '../components/Layout'
-import Email from '../components/Email'
-import Mission from '../components/Mission'
+import Layout from '../components/Layout';
+import Email from '../components/Email';
+import Mission from '../components/Mission';
+import Timer from '../components/Timer'
 
 const useStyles = makeStyles(theme => ({
   email: {
@@ -19,6 +21,10 @@ const useStyles = makeStyles(theme => ({
     padding: "1.5rem 0",
     display: "flex",
     justifyContent: "flex-end"
+  },
+
+  timer: {
+    padding: "1.5rem 0"
   }
 })) 
 
@@ -36,11 +42,14 @@ const IndexPage = () => {
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Box>
           <Paper className={classes.mission} variant="outlined" square>
             <Mission />
           </Paper>
-        </Box>
+      </Grid>
+      <Grid item xs={12}>
+        <Paper className={classes.timer} variant="outlined" square>
+          <Timer />
+        </Paper>
       </Grid>
     </Grid>
   </Layout>
