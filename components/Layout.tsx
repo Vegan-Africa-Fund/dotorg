@@ -96,10 +96,11 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleClose}>Current Projects</MenuItem>
+          <MenuItem onClick={handleClose}>Home</MenuItem>
           <MenuItem onClick={handleClose}>Blog</MenuItem>
-          <MenuItem onClick={handleClose}>Proposed Projects</MenuItem>
-          <MenuItem onClick={handleClose}>Donate</MenuItem>
+          <MenuItem onClick={handleClose}>Guides</MenuItem>
+          <MenuItem onClick={handleClose}>About</MenuItem>
+          <MenuItem onClick={handleClose}>Try Vegan</MenuItem>
         </Menu>
         </Box>
         <Link href="#"><h4>Home</h4></Link>

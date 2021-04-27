@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef } from 'react'
 import {Button, Box, Typography} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import Link from 'next/link'
 
 const useStyles = makeStyles(theme => ({
     timer: {
@@ -29,12 +30,12 @@ const useStyles = makeStyles(theme => ({
 
 const Timer = () => {
     const classes = useStyles();
-    const [day, setDay] = useState<any>('00')
-    const [hour, setHour] = useState<any>('00')
-    const [minute, setMinute] = useState<any>('00')
-    const [second, setSecond] = useState<any>('00')
+    const [day, setDay] = useState('00')
+    const [hour, setHour] = useState('00')
+    const [minute, setMinute] = useState('00')
+    const [second, setSecond] = useState('00')
 
-    let interval = useRef<ReturnType<typeof setTimeout>>();
+    let interval = useRef();
 
     const startTimer = () => {
         const countDownDate = new Date('April 30, 2021 00:00:00').getTime();
@@ -91,8 +92,12 @@ const Timer = () => {
                 </section>
             </Box>
             <Box display="flex" justifyContent="center">
+               <Link href="/invest">
                 <Button className={classes.button} variant="contained" color="secondary">Invest</Button>
-                <Button className= {classes.button} variant="contained" color="secondary">Donate</Button>
+               </Link> 
+               <Link href="/donate">
+               <Button className= {classes.button} variant="contained" color="secondary">Donate</Button>
+               </Link>
             </Box>
         </>
     )
