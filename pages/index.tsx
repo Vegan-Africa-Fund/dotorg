@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   email: {
     padding: "0.8rem",
     width: "30%",
-    backgroundColor: "#81c784",
+    backgroundColor: "#88a283",
     [theme.breakpoints.down('sm')] : {
       width: "100%",
       margin: "0 1rem"
