@@ -12,3 +12,5 @@
 
 - Clone the project and cd into the directory. Run ```npm install``` to install dependencies and ```npm run dev``` to start the application in your browser.
 
+- To deploy changes run ```npx serverless```.
+
