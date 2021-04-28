@@ -15,8 +15,8 @@ const useStyles = makeStyles(theme => ({
     },
 
     button: {
-        backgroundColor: "#81c784",
-        color: "#fff",
+        backgroundColor: "#88a384",
+        color: "#f8fff7",
         width: "15%",
         [theme.breakpoints.down('sm')] : {
             width: "30%"
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "MoonTime",
         [theme.breakpoints.down('sm')] : {
             display: "none"
-        } 
+        }
     }
 }))
 
@@ -38,13 +38,19 @@ const useStyles = makeStyles(theme => ({
 const Mission = () => {
     const classes = useStyles();
     return (
-        <Box bgcolor="#388e3c" width="80%" p="1rem" display="flex" alignItems="flex-end">
+        <Box bgcolor="#88a384" borderRadius= "15px 0 0 30px" width="80%" p="1rem" display="flex" alignItems="flex-end">
+        <Typography className={classes.title} variant="h3" align="center">Our Mission</Typography>
                 <Typography className={classes.content} variant="body2">
-                Our mission is to educate, encourage and diversify veganism while inspiring and supporting Africans to try veganism by building community, raising awareness, supporting vegan businesses, and expanding vegan food options in restaurants.
+                The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa.
+
+                VEGANAF is our token, there are 6,000,000 VEGANAFs
+
+                Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!
                 </Typography>
-                <Typography className={classes.title} variant="h3" align="center">Our Mission</Typography>
         </Box>
     )
 }
+// Investing in startups is about investing in people.
+//                 Our mission is to educate, encourage and diversify veganism while inspiring and supporting Africans to try veganism.
 
 export default Mission

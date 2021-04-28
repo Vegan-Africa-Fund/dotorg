@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   timer: {
     padding: "1.5rem 0"
   }
-})) 
+}))
 
 const IndexPage = () => {
   const classes = useStyles();
@@ -35,11 +35,9 @@ const IndexPage = () => {
   <Layout title="Home | VeganAfrica">
     <Grid container>
       <Grid item xs={12}>
-        <Box display="flex" marginY="2rem" justifyContent="center" >
-          <Paper variant="outlined" square className={classes.email}>
-            <Email />
-          </Paper>
-        </Box>
+        <Paper className={classes.timer} variant="outlined" square>
+          <Timer />
+        </Paper>
       </Grid>
       <Grid item xs={12}>
           <Paper className={classes.mission} variant="outlined" square>
@@ -47,9 +45,11 @@ const IndexPage = () => {
           </Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.timer} variant="outlined" square>
-          <Timer />
-        </Paper>
+        <Box display="flex" marginY="2rem" justifyContent="center" >
+          <Paper variant="outlined" square className={classes.email}>
+            <Email />
+          </Paper>
+        </Box>
       </Grid>
     </Grid>
   </Layout>

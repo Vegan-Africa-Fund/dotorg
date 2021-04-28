@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   button : {
     backgroundColor: "#000",
-    color: "#fff",
+    color: "#f8fff7",
     borderRadius: "2rem"
   }
 }))
@@ -97,20 +97,20 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           onClose={handleClose}
         >
           <MenuItem onClick={handleClose}>Home</MenuItem>
-          <MenuItem onClick={handleClose}>Blog</MenuItem>
-          <MenuItem onClick={handleClose}>Guides</MenuItem>
+          <MenuItem onClick={handleClose}>Donate</MenuItem>
+          <MenuItem onClick={handleClose}>Invest</MenuItem>
+          <MenuItem onClick={handleClose}>Learn</MenuItem>
           <MenuItem onClick={handleClose}>About</MenuItem>
-          <MenuItem onClick={handleClose}>Try Vegan</MenuItem>
         </Menu>
         </Box>
         <Link href="#"><h4>Home</h4></Link>
-        <Link href="#"><h4>Blog</h4></Link>
-        <Link href="#"><h4>Guides</h4></Link>
+        <Link href="#invest"><h4>Donate</h4></Link>
+        <Link href="#donate"><h4>Invest</h4></Link>
         <div>
           <Link href="#"><p>Vegan</p></Link>
           <Link href="#"><p>A F</p></Link>
           </div>
-        <Link href="#"><h4>Try Vegan</h4></Link>
+        <Link href="#"><h4>Go Vegan</h4></Link>
         <Link href="#"><h4>Donate</h4></Link>
         <Link href="#"><h4>About</h4></Link>
         <Box display={{ xs: 'block', md: 'none' }} mt="0.9rem">

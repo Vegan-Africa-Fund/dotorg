@@ -4,11 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
     input: {
-        backgroundColor: "#fff",
+        backgroundColor: "#f8fff7",
     },
 
     button: {
-        color: "#fff",
+        color: "#f8fff7",
         fontSize: "1.5rem",
         letterSpacing: "3px"
     }
@@ -18,8 +18,8 @@ const Email = () => {
     const classes = useStyles();
     return (
     <>
-        <TextField 
-        placeholder="Enter Your Email" 
+        <TextField
+        placeholder="Enter Your Email"
         fullWidth
         variant="outlined"
         className={classes.input}

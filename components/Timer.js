@@ -6,15 +6,18 @@ import Link from 'next/link'
 const useStyles = makeStyles(theme => ({
     timer: {
         justifyContent: "center",
+
         '& section': {
             width: "10%",
             '& p:first-child': {
                 marginBottom: "0",
                 fontSize: "2.5rem",
+                textAlign: "center"
             },
             '& p:nth-child(2)': {
-                marginTop: "0.5rem",
-                fontSize: "1.5rem"
+                marginTop: "0.1rem",
+                fontSize: "0.777rem",
+                textAlign: "center"
             },
             [theme.breakpoints.down('sm')] : {
                 width: "20%",
@@ -67,7 +70,7 @@ const Timer = () => {
              clearInterval(interval.current);
         }
     })
-    
+
     return (
         <>
             <Typography variant="h5" align="center">
@@ -94,7 +97,7 @@ const Timer = () => {
             <Box display="flex" justifyContent="center">
                <Link href="/invest">
                 <Button className={classes.button} variant="contained" color="secondary">Invest</Button>
-               </Link> 
+               </Link>
                <Link href="/donate">
                <Button className= {classes.button} variant="contained" color="secondary">Donate</Button>
                </Link>

@@ -5,30 +5,30 @@ import { red, green } from '@material-ui/core/colors';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#2ecc71',
+      main: '#88a384',
     },
     secondary: {
-      main: '#19857b',
+      main: '#48644c',
     },
     error: {
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: '#f2fff0',
     }
   },
   overrides: {
     MuiButton: {
       outlinedPrimary: {
-        border: "2px solid #2ecc71",
+        border: "4px solid #48644c",
         textTransform: "none",
         '&:hover': {
-          backgroundColor: green[500],
-          color: "#fff"
+          backgroundColor: "#88a384",
+          color: "#f2fff0"
         },
         '&:focus': {
           border: '2px solid',
-          borderColor: "#fff"
+          borderColor: "#f2fff0"
         },
       }
     }
