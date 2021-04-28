@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
 
 const IndexPage = () => {
   const classes = useStyles();
-
   return (
   <Layout title="Home | VeganAfrica">
     <Grid container>

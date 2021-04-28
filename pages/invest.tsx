@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     mx="auto"
     className = {styles.page}>
       <Link href="/">
-        <Button variant="outlined" position="relative" left="90%" top="0" right="0" color="primary">X</Button>
+        <Button variant="outlined" color="primary">X</Button>
       </Link>
           <br/>
       <h1>Due to international regulations we need to verify some information before you can participate in the pre-sale.</h1>
