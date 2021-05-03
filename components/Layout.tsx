@@ -23,11 +23,12 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1rem",
       fontWeight: "400",
       lineHeight: "3.5",
+      cursor: "pointer",
       [theme.breakpoints.down('sm')] : {
         display: "none"
       }
     },
-    '& h4:first-child': {
+    '& h4:first-of-type': {
       borderLeft: "0"
     },
     '& div' : {

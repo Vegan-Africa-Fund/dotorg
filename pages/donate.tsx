@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import {Box, Typography, Button} from '@material-ui/core'
 import styles from '../styles/404.module.css'
+import CryptoButton from '../components/CryptoButton'
+import {buttons} from '../store/buttons'
 
 require('dotenv').config()
 
@@ -36,6 +38,11 @@ const Donate = () => {
                 onApprove={(data: any, actions: any) => onApprove(data, actions)}/>
             </Box>
         </PayPalScriptProvider>
+        <Box>
+           {buttons.map(button => (
+               <CryptoButton key={button.id} btn={button.name} icon={button.url} />
+           ))}
+        </Box>
         <Box  width="50%" mx="auto">
             <Link href="/">
             <Button variant="outlined" color="primary">Go home</Button>
