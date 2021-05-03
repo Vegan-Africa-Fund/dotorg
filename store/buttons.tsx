@@ -4,5 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 export const buttons = [{
     id: uuidv4(),
     name: "Bitcoin",
-    url: "/icons/btc.png"
+    url: "/icons/btc.png",
+    address: "12345"
 }]

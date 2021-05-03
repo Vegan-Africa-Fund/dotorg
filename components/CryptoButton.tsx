@@ -1,8 +1,8 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import {Popover, Avatar} from '@material-ui/core';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+import AddressToCopy from './AddressToCopy'
 
 export interface CryptoProps {
     btn: string;
@@ -27,7 +27,7 @@ const CryptoButton: React.FC<CryptoProps> = ({btn, icon}) => {
             }}
           >
             <Box p={2}>
-              <Typography>The content of the Popover.</Typography>
+              <AddressToCopy />
             </Box>
           </Popover>
         </div>
