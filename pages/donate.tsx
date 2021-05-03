@@ -1,6 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import {Box, Typography} from '@material-ui/core'
+import {Box, Typography, Button} from '@material-ui/core'
 import styles from '../styles/404.module.css'
 
 require('dotenv').config()
@@ -35,6 +36,11 @@ const Donate = () => {
                 onApprove={(data: any, actions: any) => onApprove(data, actions)}/>
             </Box>
         </PayPalScriptProvider>
+        <Box  width="50%" mx="auto">
+            <Link href="/">
+            <Button variant="outlined" color="primary">Go home</Button>
+            </Link>
+        </Box>
         </Box>
     )
 }

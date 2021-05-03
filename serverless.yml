@@ -1,6 +1,6 @@
 nextJsApp:
   component: "@sls-next/serverless-component@1.18.0"
-    inputs: 
-      cloudfront:
-          distributionId: E1PJOPVQUJ11JB
-      bucketName: e0t3xo-i47pn4
+  inputs: 
+    cloudfront:
+        distributionId: E1PJOPVQUJ11JB
+    bucketName: e0t3xo-i47pn4
