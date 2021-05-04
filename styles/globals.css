@@ -26,3 +26,8 @@ html, body {
     font-family: "FuturaExtraBlack";
     src: url("/fonts/futuraExtraBlack.ttf")
 }
+
+@font-face {
+    font-family: "FuturaBold";
+    src: url("/fonts/futuraBold.ttf")
+}

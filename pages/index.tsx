@@ -1,5 +1,8 @@
-import React from 'react'
-import {Grid, Paper, Box} from '@material-ui/core'
+import React, {useEffect, useState} from 'react'
+import Link from 'next/link'
+import cookie from 'js-cookie'
+import {Grid, Paper, Box, IconButton, Button, Dialog, DialogContent, DialogContentText} from '@material-ui/core'
+import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import Email from '../components/Email';
@@ -25,33 +28,89 @@ const useStyles = makeStyles(theme => ({
 
   timer: {
     padding: "1.5rem 0"
+  },
+
+  contentText: {
+    fontFamily: "FuturaBold",
+    fontSize: "1.5rem"
+  },
+
+  dialog: {
+    backgroundColor: "#48644c",
+    padding: "3rem"
+  },
+
+  dialogButton: {
+    color: "#000",
+    marginRight: "1rem"
   }
 }))
 
 const IndexPage = () => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  console.log(cookie.get("token") === undefined)
+  useEffect(() => {
+    if(cookie.get("token") === undefined) {
+      setTimeout(() => {
+        setOpen(true)
+      }, 1500)
+    }
+  }, []);
+
+  const handleClose = () => {
+    setOpen(false);
+    cookie.set("token", "popup", {expires: 1})
+  };
   return (
-  <Layout title="Home | VeganAfrica">
-    <Grid container>
-      <Grid item xs={12}>
-        <Paper className={classes.timer} variant="outlined" square>
-          <Timer />
-        </Paper>
-      </Grid>
-      <Grid item xs={12}>
-          <Paper className={classes.mission} variant="outlined" square>
-            <Mission />
-          </Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Box display="flex" marginY="2rem" justifyContent="center" >
-          <Paper variant="outlined" square className={classes.email}>
-            <Email />
-          </Paper>
+  <>
+    <Dialog open={open} onClose={handleClose} fullWidth={true} aria-labelledby="form-dialog-title">
+        <Box display="flex" justifyContent="flex-end">
+            <IconButton onClick={handleClose}>
+              <CloseIcon />
+            </IconButton>
         </Box>
+        
+        <DialogContent className={classes.dialog} >
+          <DialogContentText className={classes.contentText}>
+            JOIN THE COMMUNITY
+          </DialogContentText>
+          <Link href="/invest">
+            <Button  onClick={handleClose} variant="contained" className={classes.dialogButton}>
+              Invest
+            </Button>
+          </Link>
+          <Link href='/donate'>
+            <Button onClick={handleClose} variant="contained" className={classes.dialogButton}>
+                Donate
+            </Button>
+          </Link>
+        </DialogContent>
+      </Dialog>
+    <Layout title="Home | VeganAfrica">
+      <Grid container>
+        <Grid item xs={12}>
+          <Paper className={classes.timer} variant="outlined" square>
+            <Timer />
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+            <Paper className={classes.mission} variant="outlined" square>
+              <Mission />
+            </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Box display="flex" marginY="2rem" justifyContent="center" >
+            <Paper variant="outlined" square className={classes.email}>
+              <Email />
+            </Paper>
+          </Box>
+        </Grid>
       </Grid>
-    </Grid>
-  </Layout>
+    </Layout>
+  </>
 )}
+
+
 
 export default IndexPage
