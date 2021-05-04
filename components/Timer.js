@@ -9,14 +9,17 @@ const useStyles = makeStyles(theme => ({
 
         '& section': {
             width: "10%",
+            fontFamily: "FuturaExtraBlack",
+            backgroundColor: "#696969",
+            color: "#fff",
             '& p:first-child': {
-                marginBottom: "0",
+                margin: "0.5rem 0",
                 fontSize: "2.5rem",
-                textAlign: "center"
+                textAlign: "center",
             },
             '& p:nth-child(2)': {
                 marginTop: "0.1rem",
-                fontSize: "0.777rem",
+                fontSize: "1rem",
                 textAlign: "center"
             },
             [theme.breakpoints.down('sm')] : {
@@ -28,6 +31,10 @@ const useStyles = makeStyles(theme => ({
 
     button : {
         margin: "0.3rem 0.6rem"
+    },
+
+    title: {
+        fontFamily: "FuturaCondensedLight"
     }
 }))
 
@@ -41,7 +48,7 @@ const Timer = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countDownDate = new Date('April 30, 2021 00:00:00').getTime();
+        const countDownDate = new Date('May 31, 2021 00:00:00').getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -73,7 +80,7 @@ const Timer = () => {
 
     return (
         <>
-            <Typography variant="h5" align="center">
+            <Typography className={classes.title} variant="h5" align="center">
                 VEGANAF token presale starts in:
             </Typography>
             <Box display="flex" className = {classes.timer}>

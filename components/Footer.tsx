@@ -18,9 +18,9 @@ const Footer = () => {
         <AppBar position="fixed" color="default" className = {classes.appBar}>
             <Box 
             display="flex"
-            ml={1}
+            mx={1}
             fontSize="0.44rem">
-                <Box flexGrow={0.9}><Typography>Vegan<span className={classes.span}>Africa</span>Fund </Typography></Box>
+                <Box flexGrow={1}><Typography>Vegan<span className={classes.span}>Africa</span>Fund </Typography></Box>
                  <SimpleDialogDemo />
             </Box>
         </AppBar>

@@ -11,3 +11,18 @@ html, body {
     font-family: "MoonTime";
     src: url("/fonts/moontime.ttf")
 }
+
+@font-face {
+    font-family: "FuturaLight";
+    src: url("/fonts/futuraLight.ttf")
+}
+
+@font-face {
+    font-family: "FuturaCondensedLight";
+    src: url("/fonts/futuraCondensedLight.otf")
+}
+
+@font-face {
+    font-family: "FuturaExtraBlack";
+    src: url("/fonts/futuraExtraBlack.ttf")
+}

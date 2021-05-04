@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Menu, IconButton, MenuItem, Button} from '@material-ui/core'
+import { Box, Menu, IconButton, MenuItem} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import Footer from './Footer';
 
@@ -56,11 +56,6 @@ const useStyles = makeStyles(theme => ({
         }
       }
     }
-  },
-  button : {
-    backgroundColor: "#000",
-    color: "#f8fff7",
-    borderRadius: "2rem"
   }
 }))
 
@@ -114,9 +109,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
         <Link href="#"><h4>Go Vegan</h4></Link>
         <Link href="#"><h4>Donate</h4></Link>
         <Link href="#"><h4>About</h4></Link>
-        <Box display={{ xs: 'block', md: 'none' }} mt="0.9rem">
-          <Button className= {classes.button}>Contribute</Button>
-        </Box>
       </nav>
     </header>
     <Box
