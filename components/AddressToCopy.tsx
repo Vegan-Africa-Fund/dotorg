@@ -15,7 +15,7 @@ export interface AddressProps {
 }
 
 
-const AddressToCopy = () => {
+const AddressToCopy: React.FC<AddressProps> = ({address}) => {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
   const [open, setOpen] = useState(false)
@@ -43,7 +43,7 @@ const AddressToCopy = () => {
   return (
   <>
     <CopyToClipboard 
-    text="bc1qnqyuuvtcg96pej70ldh9lqhu7wd65ksl76gme6"
+    text={address}
     onCopy={handleCopy}
     >
     <Button 
@@ -51,7 +51,7 @@ const AddressToCopy = () => {
     color="primary" 
     className={classes.button}
     disabled={copied} 
-    onClick={handleClick}>bc1qnqyuuvtcg96pej70ldh9lqhu7wd65ksl76gme6</Button>
+    onClick={handleClick}>{address}</Button>
     </CopyToClipboard>
     <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">

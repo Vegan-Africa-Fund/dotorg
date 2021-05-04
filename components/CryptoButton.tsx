@@ -6,10 +6,11 @@ import AddressToCopy from './AddressToCopy'
 
 export interface CryptoProps {
     btn: string;
-    icon: string
+    icon: string;
+    address: string
 }
 
-const CryptoButton: React.FC<CryptoProps> = ({btn, icon}) => {
+const CryptoButton: React.FC<CryptoProps> = ({btn, icon, address}) => {
   return (
     <PopupState variant="popover" popupId="demo-popup-popover">
       {(popupState) => (
@@ -27,7 +28,7 @@ const CryptoButton: React.FC<CryptoProps> = ({btn, icon}) => {
             }}
           >
             <Box p={2}>
-              <AddressToCopy />
+              <AddressToCopy address={address} />
             </Box>
           </Popover>
         </div>
