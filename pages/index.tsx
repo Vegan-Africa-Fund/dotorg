@@ -42,7 +42,10 @@ const useStyles = makeStyles(theme => ({
 
   dialogButton: {
     color: "#000",
-    marginRight: "1rem"
+    marginRight: "1rem",
+    [theme.breakpoints.down('xs')] : {
+      margin: "0.2rem"
+    }
   }
 }))
 
