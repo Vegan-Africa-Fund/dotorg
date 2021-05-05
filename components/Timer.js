@@ -6,26 +6,31 @@ import Link from 'next/link'
 const useStyles = makeStyles(theme => ({
     timer: {
         justifyContent: "center",
-
         '& section': {
             width: "10%",
-            fontFamily: "FuturaExtraBlack",
             backgroundColor: "#696969",
             color: "#fff",
             '& p:first-child': {
                 margin: "0.5rem 0",
                 fontSize: "2.5rem",
+                fontFamily: "FuturaExtraBlack",
                 textAlign: "center",
+                [theme.breakpoints.down('sm')] : {
+                    fontSize: "1.5rem"
+                }
             },
             '& p:nth-child(2)': {
                 marginTop: "0.1rem",
                 fontSize: "1rem",
-                textAlign: "center"
+                textAlign: "center",
+                fontFamily: "FuturaLight"
             },
-            [theme.breakpoints.down('sm')] : {
-                width: "20%",
-                justifyContent: "space-around"
+            [theme.breakpoints.down('xs')] : {
+                width: "100%"
             }
+        },
+        [theme.breakpoints.down('xs')] : {
+            justifyContent: "flex-start"
         }
     },
 

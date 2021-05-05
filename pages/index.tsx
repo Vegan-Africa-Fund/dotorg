@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme => ({
   },
 
   timer: {
-    padding: "1.5rem 0"
+    padding: "1.5rem 0",
+    [theme.breakpoints.down('xs')] : {
+      padding: "0.5rem 0"
+    } 
   },
 
   contentText: {
