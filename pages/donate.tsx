@@ -46,7 +46,7 @@ const Donate = () => {
 
     return (
         <Box>
-            <Box position= "relative" top="2rem" left="2rem">
+            <Box position= "relative" top="1rem" left="1rem" width="50%">
                 <Link href="/">
                     <IconButton className={classes.button} color="primary">
                         <CloseIcon />
