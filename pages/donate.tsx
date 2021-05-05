@@ -19,6 +19,14 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         border: "1px solid #88a384"
+    },
+
+    paypal: {
+        width: "50%",
+        margin: "1rem auto",
+        [theme.breakpoints.down('xs')] : {
+            width: "90%"
+        }
     }
 }))
 
@@ -64,9 +72,9 @@ const Donate = () => {
            ))}
         </Grid>
         <Divider />
-        <Box mt="1rem">
+        <Box className={classes.paypal}>
         <PayPalScriptProvider options={{ "client-id": `${process.env.CLIENT_ID}` }}>
-            <Box width="50%" mx="auto" mt="0.7rem">
+            <Box>
                 <PayPalButtons 
                 createOrder={(data: any, actions: any) => createOrder(data, actions)}
                 onApprove={(data: any, actions: any) => onApprove(data, actions)}/>

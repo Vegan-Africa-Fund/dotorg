@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
                 textAlign: "center",
                 fontFamily: "FuturaLight"
             },
-            [theme.breakpoints.down('xs')] : {
+            [theme.breakpoints.down('sm')] : {
                 width: "100%"
             }
         },

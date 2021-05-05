@@ -55,6 +55,10 @@ const useStyles = makeStyles(theme => ({
           right: "0.3rem"
         }
       }
+    },
+    [theme.breakpoints.down('sm')] : {
+      justifyContent: "space-between",
+      width: "90%"
     }
   }
 }))
@@ -92,22 +96,23 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleClose}>Home</MenuItem>
-          <MenuItem onClick={handleClose}>Donate</MenuItem>
-          <MenuItem onClick={handleClose}>Invest</MenuItem>
-          <MenuItem onClick={handleClose}>Learn</MenuItem>
-          <MenuItem onClick={handleClose}>About</MenuItem>
+          <Link href="/"><MenuItem>Home</MenuItem></Link>
+          <Link href="/donate"><MenuItem>Donate</MenuItem></Link>
+          <Link href="/invest"><MenuItem>Invest</MenuItem></Link>
+          <Link href="/go-vegan"><MenuItem>Go Vegan</MenuItem></Link>
+          <Link href="/donate"><MenuItem>Donate</MenuItem></Link>
+          <Link href="/"><MenuItem>About</MenuItem></Link>
         </Menu>
         </Box>
-        <Link href="#"><h4>Home</h4></Link>
-        <Link href="#invest"><h4>Donate</h4></Link>
-        <Link href="#donate"><h4>Invest</h4></Link>
+        <Link href="/"><h4>Home</h4></Link>
+        <Link href="/invest"><h4>Donate</h4></Link>
+        <Link href="/donate"><h4>Invest</h4></Link>
         <div>
           <Link href="#"><p>Vegan</p></Link>
           <Link href="#"><p>A F</p></Link>
           </div>
-        <Link href="#"><h4>Go Vegan</h4></Link>
-        <Link href="#"><h4>Donate</h4></Link>
+        <Link href="/go-vegan"><h4>Go Vegan</h4></Link>
+        <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="#"><h4>About</h4></Link>
       </nav>
     </header>
