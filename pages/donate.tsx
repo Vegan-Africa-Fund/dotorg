@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import {Box, Typography, Button, Grid} from '@material-ui/core'
+import {Box, Typography, Grid, Divider, IconButton} from '@material-ui/core'
+import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../styles/404.module.css'
 import CryptoButton from '../components/CryptoButton'
 import {buttons} from '../store/buttons'
 
@@ -12,9 +12,13 @@ require('dotenv').config()
 const useStyles = makeStyles(theme => ({
     grid: {
         width: "90%",
+        margin: "1rem auto",
         [theme.breakpoints.down('sm')] : {
             width: "100%"
           }
+    },
+    button: {
+        border: "1px solid #88a384"
     }
 }))
 
@@ -41,15 +45,15 @@ const Donate = () => {
     }
 
     return (
-        <Box className = {styles.page}>
-        <Typography variant="h4" align="center">Donate</Typography>
-        <PayPalScriptProvider options={{ "client-id": `${process.env.CLIENT_ID}` }}>
-            <Box width="50%" mx="auto" mt="0.7rem">
-                <PayPalButtons 
-                createOrder={(data: any, actions: any) => createOrder(data, actions)}
-                onApprove={(data: any, actions: any) => onApprove(data, actions)}/>
+        <Box>
+            <Box position= "relative" top="2rem" left="2rem">
+                <Link href="/">
+                    <IconButton className={classes.button} color="primary">
+                        <CloseIcon />
+                    </IconButton>
+                </Link>
             </Box>
-        </PayPalScriptProvider>
+        <Typography variant="h4" align="center">Donate</Typography>
         <Grid container spacing={1} className={classes.grid}>
            {buttons.map(button => (
                <Grid item xs={3} sm={2} key={button.id}>
@@ -59,10 +63,15 @@ const Donate = () => {
                </Grid>
            ))}
         </Grid>
-        <Box width="50%" mx="auto" mt="2rem">
-            <Link href="/">
-            <Button variant="outlined" color="primary">Go home</Button>
-            </Link>
+        <Divider />
+        <Box mt="1rem">
+        <PayPalScriptProvider options={{ "client-id": `${process.env.CLIENT_ID}` }}>
+            <Box width="50%" mx="auto" mt="0.7rem">
+                <PayPalButtons 
+                createOrder={(data: any, actions: any) => createOrder(data, actions)}
+                onApprove={(data: any, actions: any) => onApprove(data, actions)}/>
+            </Box>
+        </PayPalScriptProvider>
         </Box>
         </Box>
     )

@@ -4,13 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     content: {
-        width: "70%",
         margin: "auto",
-        fontSize: "1.5rem",
-        padding: "1rem 0",
+        fontSize: "1.3rem",
+        padding: "0.75rem 0",
         fontFamily: "FuturaLight",
         [theme.breakpoints.down('sm')] : {
-            fontSize: "1.2rem",
+            fontSize: "1.1rem",
             width: "100%"
         }
     },
@@ -34,27 +33,41 @@ const useStyles = makeStyles(theme => ({
         }
     },
 
-    par: {
-       lineHeight: "5rem",
-       [theme.breakpoints.down('sm')] : {
-        lineHeight: "3rem"
+    rightBox: {
+       width: "30%",
+       borderRadius: "1rem 0 0 1rem",
+       padding: "0.4rem 0.8rem",
+       [theme.breakpoints.down('xs')] : {
+        width: "48%",
+        padding: "0.1rem 0.4rem"
        }
-    }
+    },
+
+    leftBox: {
+        width: "30%",
+        padding: "0.4rem 0.8rem",
+        borderRadius: "0 1rem 1rem 0",
+        [theme.breakpoints.down('xs')] : {
+         width: "48%",
+         padding: "0.1rem 0.4rem"
+        }
+     }
 }))
 
 
 const Mission = () => {
     const classes = useStyles();
     return (
-        <Box bgcolor="#88a384" borderRadius= "15px 0 0 30px" width="80%" p="1rem" display="flex" alignItems="flex-end">
-        <Typography className={classes.title} variant="h3" align="center">Our Mission</Typography>
-                <Typography className={classes.content} variant="body2">
-                The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa.<br></br>
-
-                <span className={classes.par}>VEGANAF is our token, there are 6,000,000 VEGANAFs.</span><br></br>
-
-                Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!
-                </Typography>
+        <Box display="flex" flexDirection="column" borderRadius= "15px 0 0 30px" width="100%" p="1rem 0">
+            <Box alignSelf="flex-end" bgcolor="#88a384" mb="2rem" className={classes.rightBox}>
+                <Typography className={classes.content} variant="body2">The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa</Typography>
+            </Box>
+            <Box bgcolor="#88a384" mb="2rem" className={classes.leftBox}>
+                <Typography className={classes.content} variant="body2">VEGANAF is our token, there are 6,000,000 VEGANAFs.</Typography>
+            </Box>
+            <Box alignSelf="flex-end" bgcolor="#88a384" className={classes.rightBox}>
+                <Typography className={classes.content} variant="body2">Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!</Typography>
+            </Box>
         </Box>
     )
 }
