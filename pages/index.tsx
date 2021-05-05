@@ -23,7 +23,11 @@ const useStyles = makeStyles(theme => ({
   mission: {
     padding: "1.5rem 0",
     display: "flex",
-    justifyContent: "flex-end"
+    backgroundImage: `url('/images/pina.jpg')`,
+    backgroundSize: "auto",
+    [theme.breakpoints.down('sm')] : {
+      backgroundSize: "cover"
+    }
   },
 
   timer: {
