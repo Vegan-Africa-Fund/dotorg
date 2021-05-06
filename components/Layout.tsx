@@ -105,8 +105,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
         </Menu>
         </Box>
         <Link href="/"><h4>Home</h4></Link>
-        <Link href="/invest"><h4>Donate</h4></Link>
-        <Link href="/donate"><h4>Invest</h4></Link>
+        <Link href="/donate"><h4>Donate</h4></Link>
+        <Link href="/invest"><h4>Invest</h4></Link>
         <div>
           <Link href="#"><p>Vegan</p></Link>
           <Link href="#"><p>A F</p></Link>

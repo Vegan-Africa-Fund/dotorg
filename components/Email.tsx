@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {API, graphqlOperation} from 'aws-amplify'
 import Amplify from 'aws-amplify'
 import {TextField, Button, Box, Snackbar} from "@material-ui/core"
+import Recaptcha from "react-recaptcha";
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 import amplifyConfig from '../aws-exports'
@@ -35,6 +36,7 @@ const Email = () => {
     const classes = useStyles();
     const [email, setEmail]=useState('')
     const [open, setOpen] = useState(false)
+    const [verified, setVerified] = useState(false)
 
     const Alert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -46,6 +48,14 @@ const Email = () => {
 
     const emailData = {
         email
+    }
+
+    const recaptchaLoaded = () => {
+        console.log("Captcha successfully loaded.")
+    }
+
+    const verify = (response: any) => {
+        if(response) setVerified(true)
     }
 
     const handleSubmit = async (e: any) => {
@@ -72,9 +82,17 @@ const Email = () => {
             className={classes.input}
             />
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit">SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
             </Box>
         </form>
+        <Box>
+            <Recaptcha
+                sitekey={process.env.RECAPTCHA_SITE_KEY}
+                render="explicit"
+                onloadCallback={recaptchaLoaded}
+                verifyCallback={verify}
+            />
+        </Box>
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
             Sign-up successful!
