@@ -37,14 +37,16 @@ const useStyles = makeStyles(theme => ({
   contentText: {
     fontFamily: "FuturaBold",
     fontSize: "1.5rem"
-  }
+  },
+
 }))
 
-const GoVeganPage = () => {
+const AboutPage = () => {
   const classes = useStyles();
+
   return (
   <>
-    <Layout title="Home | Go Vegan">
+    <Layout title="Home | About">
       <Grid container>
         <Grid item xs={12}>
           <Paper className={classes.timer} variant="outlined" square>
@@ -70,4 +72,4 @@ const GoVeganPage = () => {
 
 
 
-export default GoVeganPage
+export default AboutPage

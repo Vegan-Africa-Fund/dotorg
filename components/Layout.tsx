@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around",
     '& h4': {
       borderLeft: "1px solid black",
-      width: "10%",
+      width: "12%",
       textAlign: "center",
       fontSize: "1rem",
       fontWeight: "400",
@@ -30,6 +30,9 @@ const useStyles = makeStyles(theme => ({
     },
     '& h4:first-of-type': {
       borderLeft: "0"
+    },
+    '& h4:nth-child(4)': {
+      borderRight: "1px solid black"
     },
     '& div' : {
       width: "20%",
@@ -101,19 +104,19 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           <Link href="/invest"><MenuItem>Invest</MenuItem></Link>
           <Link href="/go-vegan"><MenuItem>Go Vegan</MenuItem></Link>
           <Link href="/donate"><MenuItem>Donate</MenuItem></Link>
-          <Link href="/"><MenuItem>About</MenuItem></Link>
+          <Link href="/about"><MenuItem>About</MenuItem></Link>
         </Menu>
         </Box>
         <Link href="/"><h4>Home</h4></Link>
         <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="/invest"><h4>Invest</h4></Link>
         <div>
-          <Link href="#"><p>Vegan</p></Link>
-          <Link href="#"><p>A F</p></Link>
+          <Link href="/"><p>Vegan</p></Link>
+          <Link href="/"><p>A F</p></Link>
           </div>
         <Link href="/go-vegan"><h4>Go Vegan</h4></Link>
         <Link href="/donate"><h4>Donate</h4></Link>
-        <Link href="#"><h4>About</h4></Link>
+        <Link href="/about"><h4>About</h4></Link>
       </nav>
     </header>
     <Box

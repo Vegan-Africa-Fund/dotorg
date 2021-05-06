@@ -24,10 +24,7 @@ const useStyles = makeStyles(theme => ({
     padding: "1.5rem 0",
     display: "flex",
     backgroundImage: `url('/images/pina.jpg')`,
-    backgroundSize: "auto",
-    [theme.breakpoints.down('sm')] : {
-      backgroundSize: "cover"
-    }
+    backgroundSize: "cover"
   },
 
   timer: {
