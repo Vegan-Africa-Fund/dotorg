@@ -28,6 +28,7 @@ const useStyles = makeStyles(() => ({
         <Box
         width="66%"
         mx="auto"
+        mb="7rem"
         className = {styles.page}>
         <h1>Due to international regulations we need to verify some information before you can participate in the pre-sale.</h1>
         <h1>Please contact us:</h1>
