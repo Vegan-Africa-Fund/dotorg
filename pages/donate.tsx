@@ -61,7 +61,7 @@ const Donate = () => {
                     </IconButton>
                 </Link>
             </Box>
-        <Typography variant="h4" align="center">Donate</Typography>
+        <Typography variant="h4" align="center">Donate to the Vegan Africa Fund</Typography>
         <Grid container spacing={1} className={classes.grid}>
            {buttons.map(button => (
                <Grid item xs={3} sm={2} key={button.id}>
