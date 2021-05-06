@@ -81,18 +81,19 @@ const Email = () => {
             onChange={(e) =>{setEmail(e.target.value)}}
             className={classes.input}
             />
+             <Box>
+                <Recaptcha
+                    sitekey={process.env.RECAPTCHA_SITE_KEY}
+                    render="explicit"
+                    onloadCallback={recaptchaLoaded}
+                    verifyCallback={verify}
+                />
+            </Box>
             <Box display="flex" justifyContent="center">
                 <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
             </Box>
         </form>
-        <Box>
-            <Recaptcha
-                sitekey={process.env.RECAPTCHA_SITE_KEY}
-                render="explicit"
-                onloadCallback={recaptchaLoaded}
-                verifyCallback={verify}
-            />
-        </Box>
+
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
             Sign-up successful!
