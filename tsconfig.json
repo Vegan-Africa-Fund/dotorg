@@ -19,5 +19,5 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "components/Timer.js", "pages/donate.tsx", "components/CryptoButton.js"]
+  "include": ["**/*.ts", "**/*.tsx", "components/Timer.js", "pages/donate.tsx", "components/CryptoButton.js", "server.js"]
 }
