@@ -102,7 +102,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           <Link href="/"><MenuItem>Home</MenuItem></Link>
           <Link href="/donate"><MenuItem>Donate</MenuItem></Link>
           <Link href="/invest"><MenuItem>Invest</MenuItem></Link>
-          <Link href="/go-vegan"><MenuItem>Go Vegan</MenuItem></Link>
+          <Link href="/team"><MenuItem>Meet the team</MenuItem></Link>
           <Link href="/donate"><MenuItem>Donate</MenuItem></Link>
           <Link href="/about"><MenuItem>About</MenuItem></Link>
         </Menu>
@@ -114,7 +114,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           <Link href="/"><p>Vegan</p></Link>
           <Link href="/"><p>A F</p></Link>
           </div>
-        <Link href="/go-vegan"><h4>Go Vegan</h4></Link>
+        <Link href="/team"><h4>Meet the team</h4></Link>
         <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="/about"><h4>About</h4></Link>
       </nav>
