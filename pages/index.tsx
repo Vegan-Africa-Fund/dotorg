@@ -7,7 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import Email from '../components/Email';
 import Mission from '../components/Mission';
-import Timer from '../components/Timer'
+import Timer from '../components/Timer';
+import Statement from '../components/Statement'
 
 const useStyles = makeStyles(theme => ({
   email: {
@@ -50,6 +51,12 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')] : {
       margin: "0.2rem"
     }
+  },
+
+  statement: {
+    margin: "1rem auto",
+    width: "90%",
+    padding: "1.5rem"
   }
 }))
 
@@ -96,6 +103,11 @@ const IndexPage = () => {
       </Dialog>
     <Layout title="Home | VeganAfrica">
       <Grid container>
+        <Grid item xs={12}>
+          <Paper className={classes.statement}  elevation={0} >
+            <Statement />
+          </Paper>
+        </Grid>
         <Grid item xs={12}>
           <Paper className={classes.timer} variant="outlined" square>
             <Timer />
