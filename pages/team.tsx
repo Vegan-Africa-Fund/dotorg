@@ -49,7 +49,10 @@ const useStyles = makeStyles(theme => ({
 
     divider: {
         position: "relative",
-        top: "2rem"
+        top: "2rem",
+        [theme.breakpoints.down('sm')]: {
+            display: "none"
+        }
     },
 
     grid: {
@@ -67,15 +70,15 @@ const Team = () => {
     return (
         <>
         <Grid className={classes.grid} container>
-            <Grid item xs={5}>
+            <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} md={4} lg={2}>
                 <Box fontWeight="fontWeightBold">
                 <Typography className={classes.teamTitle} variant="h6" align="center">Meet the Team</Typography>
                 </Box>
             </Grid>
-            <Grid item xs={5}>
+            <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />
             </Grid>
         </Grid>
