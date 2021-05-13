@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {Box, Typography, Divider, Grid} from '@material-ui/core';
 import SimpleAccordion from '../components/Accordion'
+import Layout from '../components/Layout';
 
 const useStyles = makeStyles(theme => ({
     founder: {
@@ -30,7 +31,8 @@ const useStyles = makeStyles(theme => ({
 
     statement: {
         fontFamily: "FuturaLight",
-        fontSize: "1.2rem"
+        fontSize: "1.2rem",
+        textShadow: "0.5px 0.5px 0.5px #000, 0 0 0.3em #000, 0 0 0.12em #fff"
     },
 
     employee: {
@@ -68,7 +70,7 @@ const useStyles = makeStyles(theme => ({
 const Team = () => {
     const classes = useStyles();
     return (
-        <>
+        <Layout>
         <Grid className={classes.grid} container>
             <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />
@@ -101,7 +103,7 @@ const Team = () => {
                     <Typography variant="subtitle2">Marketing & Communications Head</Typography>
                 </Box>
             </Box>
-        </>
+        </Layout>
     )
 }
 
