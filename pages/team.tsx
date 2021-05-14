@@ -32,7 +32,9 @@ const useStyles = makeStyles(theme => ({
     statement: {
         fontFamily: "FuturaLight",
         fontSize: "1.2rem",
-        textShadow: "0.5px 0.5px 0.5px #000, 0 0 0.3em #000, 0 0 0.12em #fff"
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "start"
+        }
     },
 
     employee: {
@@ -70,7 +72,7 @@ const useStyles = makeStyles(theme => ({
 const Team = () => {
     const classes = useStyles();
     return (
-        <Layout>
+        <Layout title="Team | VeganAfrica">
         <Grid className={classes.grid} container>
             <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />

@@ -37,31 +37,23 @@ const useStyles = makeStyles(theme => ({
     },
 
     rightBox: {
-       width: "30%",
-       borderRadius: "1rem 0 0 1rem",
+       width: "50%",
+       marginLeft: "2rem",
+       borderRadius: "20px",
        padding: "0.4rem 0.8rem",
        [theme.breakpoints.down('xs')] : {
-        width: "48%",
+        width: "70%",
         padding: "0.1rem 0.4rem"
        }
     },
 
-    leftBox: {
-        width: "30%",
-        padding: "0.4rem 0.8rem",
-        borderRadius: "0 1rem 1rem 0",
-        [theme.breakpoints.down('xs')] : {
-         width: "48%",
-         padding: "0.1rem 0.4rem"
-        }
-     }
 }))
 
 
 const Mission = () => {
     const classes = useStyles();
     return (
-        <Box display="flex" flexDirection="column" p="1rem 0">
+        <Box display="flex" bgcolor="#88a384" className={classes.rightBox} flexDirection="column" p="1rem 0">
             <Typography className={classes.content} variant="body2">The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa</Typography>
             <Typography className={classes.content} variant="body2">VEGANAF is our token, there are 6,000,000 VEGANAFs.</Typography>
             <Typography className={classes.content} variant="body2">Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!</Typography>

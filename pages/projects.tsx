@@ -35,14 +35,13 @@ project: {
 statement: {
   fontFamily: "FuturaLight",
   fontSize: "1.2rem",
-  textShadow: "0.5px 0.5px 0.5px #fff, 0 0 0.3em #fff, 0 0 0.2em #000"
 }
 }))
 
 const CurrentProjects = () => {
   const classes = useStyles();
   return (
-    <Layout>
+    <Layout title="Projects | VeganAfrica">
       <Grid className={classes.titleGrid} container>
         <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />
