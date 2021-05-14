@@ -33,7 +33,8 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "FuturaLight",
         fontSize: "1.2rem",
         [theme.breakpoints.down('sm')]: {
-            textAlign: "start"
+            textAlign: "start",
+            width: "90%"
         }
     },
 
