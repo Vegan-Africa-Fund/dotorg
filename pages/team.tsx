@@ -34,7 +34,8 @@ const useStyles = makeStyles(theme => ({
         fontSize: "1.2rem",
         [theme.breakpoints.down('sm')]: {
             textAlign: "start",
-            width: "90%"
+            width: "95%",
+            margin: "0 auto"
         }
     },
 
