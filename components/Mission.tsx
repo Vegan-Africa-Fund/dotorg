@@ -55,7 +55,6 @@ const Mission = () => {
     return (
         <Box display="flex" bgcolor="#88a384" className={classes.rightBox} flexDirection="column" p="1rem 0">
             <Typography className={classes.content} variant="body2">The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa</Typography>
-            <Typography className={classes.content} variant="body2">VEGANAF is our token, there are 6,000,000 VEGANAFs.</Typography>
             <Typography className={classes.content} variant="body2">Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!</Typography>
         </Box>
     )

@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
 
-    ceoContent: {
+    bodyContent: {
         marginLeft: "1.5rem",
         [theme.breakpoints.down('sm')]: {
             textAlign: "center"
@@ -41,16 +41,17 @@ const useStyles = makeStyles(theme => ({
 
     employee: {
         width: "80%",
-        margin: "2rem auto"
+        margin: "2rem auto",
+        display: "flex",
+        [theme.breakpoints.down('sm')]: {
+            width: "100%",
+            flexDirection: "column",
+            alignItems: "center"
+        }
     },
-    employeeContent: {
-        width: "200px",
-        textAlign: "center"
-    },
-
     employeeImage: {
-        width: "250px",
-        height: "250px"
+        width: "216px",
+        height: "217px"
     },
 
     divider: {
@@ -109,14 +110,21 @@ const Team = () => {
         </Grid>
         <Box className={classes.founder}>
             <img className={classes.ceoImage} alt="ceo" src="/images/Sunny.webp" />
-            <Box className={classes.ceoContent}>
+            <Box className={classes.bodyContent}>
                 <Typography variant="h5">Sunny Satva</Typography>
-                <Typography variant="h6">Founder & CEO</Typography>
+                <Typography variant="h6">Founder</Typography>
                 <Typography className={classes.statement} variant="body1">
                 I started Vegan AF while traveling around East Africa, hoping to make a positive impact in all of the places I went. I love food and love to eat, and one of my favorite ways to impactfully spend my money is by supporting businesses that are aligned with my ethics and vision for the future.  While in Kenya, I realized that I don’t just want to buy from plant-based businesses - I want to help them scale their operations! 
                 {show ? (
                     <>
-                    <span> I began personally impact investing in early 2021 and feel an incredible sense of fulfillment from supporting initiatives that are changing the world and dietary habits on the fastest-growing continent on earth. I believe part of my mission on earth is to redistribute wealth and help people see the vision I have for the future - a kinder, plant-based planet that will allow for beautiful human evolution for decades to come. I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 presidential campaign. I’m the author and publisher of Sunny Payne’s Soy-Free Vegan Cookbook (available on Amazon).</span>
+                    <span> I began impact investing in early 2021 after seeing a huge need for start-up capital in African businesses. I was inspired by the vegan entrepreneurs creating kind businesses and working to veganize their communities in East Africa. There are many amazing people spreading veganism on a local level, but at the same time there's a clear lack of vegan-centric investment here. I feel called to raise awareness about the environmental degradation caused by farming and consuming animals, and to help shape a more sustainable future. I also want to show everyone how delicious vegan food is! 
+
+                        It’s clear to me that achieving a more equitable future and enabling a thriving plant-based economy requires the transparency and decentralization provided by blockchain technology. This is why I created a digital token to represent the Vegan AF movement. 
+
+                        Vegan AF is prioritizing a world with more vegans. We aim to provide access to vegan products, education about why going vegan benefits you, your community and your planet (and the animals!), and foster a plant-based community. The businesses Vegan AF invests in have a debt of our token, which they can accept from customers and use to buy back shares of their own companies from Vegan AF.  
+
+                        I’m a social entrepreneur with a desire to shape a kind, beautiful future. I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 U.S. presidential campaign.
+                    </span>
                     <Box>
                         <Button onClick={handleLess} className={classes.showLess}>Show Less</Button>
                     </Box>
@@ -130,9 +138,10 @@ const Team = () => {
         <Divider />
             <Box className={classes.employee}>
                 <img className={classes.employeeImage} alt="marketing-head" src="/images/Wendy.webp" />
-                <Box className={classes.employeeContent}>
+                <Box className={classes.bodyContent}>
                     <Typography variant="h6">Wendy Matheka</Typography>
-                    <Typography variant="subtitle2">Marketing & Communications Head</Typography>
+                    <Typography variant="subtitle2">Head of Digital</Typography>
+                    <Typography className={classes.statement} variant="body1">I create content, manage social media, and manage the overall digital presence of Vegan AF. I got involved because I’m passionate about veganism, and creating awareness is the first step to lasting change. We live on a meat-centric continent and I'm excited to be part of the solution. I'm passionate about helping create the  platform, society and community that I needed for support when I went vegan. I hope to see a more compassionate, conscious Africa and world where we live more sustainably, respect life and our planet and improve the world for the generations to come.</Typography>
                 </Box>
             </Box>
         </Layout>
