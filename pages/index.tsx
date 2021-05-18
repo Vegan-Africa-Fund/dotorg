@@ -9,7 +9,7 @@ import Email from '../components/Email';
 import Mission from '../components/Mission';
 import Timer from '../components/Timer';
 import Statement from '../components/Statement';
-import WhatWeDo from '../components/WhatWeDo'
+import WhatWeDo from '../components/WhatWeDo';
 
 const useStyles = makeStyles(theme => ({
   email: {
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
 const IndexPage = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  console.log(cookie.get("token") === undefined)
+
   useEffect(() => {
     if(cookie.get("token") === undefined) {
       setTimeout(() => {

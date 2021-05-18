@@ -1,13 +1,10 @@
 import React, {useState} from 'react'
-import {API, graphqlOperation} from 'aws-amplify'
-import Amplify from 'aws-amplify'
 import {TextField, Button, Box, Snackbar} from "@material-ui/core"
 import Recaptcha from "react-recaptcha";
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
-import amplifyConfig from '../aws-exports'
+import database from '../firebase/firebase';
 
-Amplify.configure(amplifyConfig);
 
 const useStyles = makeStyles(() => ({
     input: {
@@ -21,16 +18,6 @@ const useStyles = makeStyles(() => ({
     }
 }))
 
-const createVegan = `
-mutation createVegan($email: String!) {
-    createVegan(vegan: {
-        email: $email
-    }){
-        email
-        id
-    }
-}
-`
 
 const Email = () => {
     const classes = useStyles();
@@ -58,10 +45,10 @@ const Email = () => {
         if(response) setVerified(true)
     }
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         try {
-            await API.graphql(graphqlOperation(createVegan, emailData))
+            database.ref('Veganafrica').push(emailData)
             setEmail('')
             setOpen(true)
         } catch (err) {
