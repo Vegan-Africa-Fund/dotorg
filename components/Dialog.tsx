@@ -51,7 +51,7 @@ function SimpleDialog(props: SimpleDialogProps) {
                         </ListItemAvatar>
                         <ListItemText primary="Whatsapp" />
                 </ListItem>
-                <ListItem autoFocus button onClick={handleClose}  component="a" href="https://telegram.me/WR_the_coder" target="_blank">
+                <ListItem autoFocus button onClick={handleClose}  component="a" href="https://t.me/vaf_sunny" target="_blank">
                     <ListItemAvatar>
                         <Avatar>
                         <TelegramIcon />
