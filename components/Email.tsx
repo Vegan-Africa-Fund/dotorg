@@ -25,6 +25,8 @@ const Email = () => {
     const [open, setOpen] = useState(false)
     const [verified, setVerified] = useState(false)
 
+    console.log(verified)
+
     const Alert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
       }
@@ -77,7 +79,7 @@ const Email = () => {
                 />
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit">SIGN UP</Button>
             </Box>
         </form>
 
