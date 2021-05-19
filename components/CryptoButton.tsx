@@ -3,7 +3,6 @@ import Box from '@material-ui/core/Box';
 import {Popover, Avatar} from '@material-ui/core';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import AddressToCopy from './AddressToCopy'
-
 export interface CryptoProps {
     btn: string;
     icon: string;
