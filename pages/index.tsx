@@ -1,8 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import Link from 'next/link'
-import cookie from 'js-cookie'
-import {Grid, Paper, Box, IconButton, Button, Dialog, DialogContent, DialogContentText} from '@material-ui/core'
-import CloseIcon from '@material-ui/icons/Close';
+import React from 'react'
+import {Grid, Paper, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import Email from '../components/Email';
@@ -63,45 +60,8 @@ const useStyles = makeStyles(theme => ({
 
 const IndexPage = () => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if(cookie.get("token") === undefined) {
-      setTimeout(() => {
-        setOpen(true)
-      }, 1500)
-    }
-  }, []);
-
-  const handleClose = () => {
-    setOpen(false);
-    cookie.set("token", "popup", {expires: 1})
-  };
   return (
   <>
-    <Dialog open={open} onClose={handleClose} fullWidth={true} aria-labelledby="form-dialog-title">
-        <Box display="flex" justifyContent="flex-end">
-            <IconButton onClick={handleClose}>
-              <CloseIcon />
-            </IconButton>
-        </Box>
-        
-        <DialogContent className={classes.dialog} >
-          <DialogContentText className={classes.contentText}>
-            JOIN THE COMMUNITY
-          </DialogContentText>
-          <Link href="/invest">
-            <Button  onClick={handleClose} variant="contained" className={classes.dialogButton}>
-              Invest
-            </Button>
-          </Link>
-          <Link href='/donate'>
-            <Button onClick={handleClose} variant="contained" className={classes.dialogButton}>
-                Donate
-            </Button>
-          </Link>
-        </DialogContent>
-      </Dialog>
     <Layout title="Home | VeganAfrica">
       <Grid container>
         <Grid item xs={12}>
