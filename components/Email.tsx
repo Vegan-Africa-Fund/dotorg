@@ -15,7 +15,16 @@ const useStyles = makeStyles(() => ({
         color: "#f8fff7",
         fontSize: "1.5rem",
         letterSpacing: "3px"
+    },
+
+    recaptcha: {
+        '& div': {
+            '& iframe': {
+                width: "500px"
+            }
+        }
     }
+
 }))
 
 
@@ -68,17 +77,19 @@ const Email = () => {
             onChange={(e) =>{setEmail(e.target.value)}}
             className={classes.input}
             />
-             <Box>
+            <Box display="flex" justifyContent="center">
+                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
+            </Box>
+             <Box display="flex" justifyContent="center">
                 <Recaptcha
                     sitekey={process.env.RECAPTCHA_SITE_KEY}
                     render="explicit"
                     onloadCallback={recaptchaLoaded}
                     verifyCallback={verify}
+                    size="compact"
                 />
             </Box>
-            <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
-            </Box>
+
         </form>
 
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
