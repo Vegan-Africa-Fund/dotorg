@@ -7,7 +7,6 @@ import Mission from '../components/Mission';
 import Timer from '../components/Timer';
 import Statement from '../components/Statement';
 import WhatWeDo from '../components/WhatWeDo';
-
 const useStyles = makeStyles(theme => ({
   email: {
     padding: "0.8rem",

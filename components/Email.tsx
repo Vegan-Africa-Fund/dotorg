@@ -1,9 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {TextField, Button, Box, Snackbar} from "@material-ui/core"
 import Recaptcha from "react-recaptcha";
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
+import {useDispatch, useSelector} from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles';
 import database from '../firebase/firebase';
+import {getEmailfromDB} from '../actions/email'
 
 
 const useStyles = makeStyles(() => ({
@@ -33,6 +35,21 @@ const Email = () => {
     const [email, setEmail]=useState('')
     const [open, setOpen] = useState(false)
     const [verified, setVerified] = useState(false)
+    const [emailExist, setEmailExist] = useState([])
+
+    interface RootState {
+        Email: [{
+            email: string
+        }]
+    }
+
+    const dispatch =useDispatch()
+    const allEmails = useSelector((state: RootState)=> state.Email)
+    console.log(allEmails.some(item => item.email === email))
+
+    useEffect(() => {
+         dispatch(getEmailfromDB())
+    }, [])
 
     const Alert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
