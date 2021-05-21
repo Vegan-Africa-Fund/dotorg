@@ -73,12 +73,17 @@ const Email = () => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        try {
-            database.ref('Veganafrica').push(emailData)
+        if(allEmails.some(item => item.email === email)){
+            console.log("Email already exists")
             setEmail('')
-            setOpen(true)
-        } catch (err) {
-            console.log(err)
+        } else {
+            try {
+                database.ref('Veganafrica').push(emailData)
+                setEmail('')
+                setOpen(true)
+            } catch (err) {
+                console.log(err)
+            }
         }
     }
     return (
