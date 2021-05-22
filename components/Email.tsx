@@ -128,16 +128,17 @@ const Email = () => {
             {session ? (
                 <Typography className={classes.message} variant="subtitle1">Thank you for signing up!</Typography>
             ) : (
+                <></>
+            )}
                 <Box display="flex" justifyContent="center">
                     <Recaptcha
                         sitekey={process.env.RECAPTCHA_SITE_KEY}
                         render="explicit"
                         verifyCallback={verify}
                         onloadCallback={recaptchaLoaded}
-                        size="compact"
+                        size={session ? "invisible" : "compact"}
                     />
                 </Box>
-            )}
 
         </form>
 
