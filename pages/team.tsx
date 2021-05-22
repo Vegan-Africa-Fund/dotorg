@@ -84,8 +84,6 @@ const Team = () => {
     const classes = useStyles();
     const[show, setShow] = useState(false)
 
-    console.log(show)
-
     const handleMore = () => {
         setShow(true)
     }

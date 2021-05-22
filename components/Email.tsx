@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {TextField, Button, Box, Snackbar} from "@material-ui/core"
+import {TextField, Button, Box, Snackbar, IconButton, Collapse} from "@material-ui/core"
+import Alert from '@material-ui/lab/Alert';
+import CloseIcon from '@material-ui/icons/Close';
 import Recaptcha from "react-recaptcha";
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import {useDispatch, useSelector} from 'react-redux'
@@ -35,7 +37,8 @@ const Email = () => {
     const [email, setEmail]=useState('')
     const [open, setOpen] = useState(false)
     const [verified, setVerified] = useState(false)
-    const [emailExist, setEmailExist] = useState([])
+    const [emailExist, setEmailExist] = useState(false)
+
 
     interface RootState {
         Email: [{
@@ -45,13 +48,12 @@ const Email = () => {
 
     const dispatch =useDispatch()
     const allEmails = useSelector((state: RootState)=> state.Email)
-    console.log(allEmails.some(item => item.email === email))
 
     useEffect(() => {
          dispatch(getEmailfromDB())
     }, [])
 
-    const Alert = (props: AlertProps) => {
+    const SuccessfulAlert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
       }
 
@@ -64,7 +66,7 @@ const Email = () => {
     }
 
     const recaptchaLoaded = () => {
-        console.log("Captcha successfully loaded.")
+        console.log("Captcha loaded!")
     }
 
     const verify = (response: any) => {
@@ -74,12 +76,13 @@ const Email = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         if(allEmails.some(item => item.email === email)){
-            console.log("Email already exists")
             setEmail('')
+            setEmailExist(true)
         } else {
             try {
                 database.ref('Veganafrica').push(emailData)
                 setEmail('')
+                setEmailExist(false)
                 setOpen(true)
             } catch (err) {
                 console.log(err)
@@ -99,6 +102,26 @@ const Email = () => {
             onChange={(e) =>{setEmail(e.target.value)}}
             className={classes.input}
             />
+            <Box display="flex" justifyContent="center" mt="0.3rem">
+                <Collapse in={emailExist}>
+                    <Alert
+                        action={
+                            <IconButton
+                            aria-label="close"
+                            color="inherit"
+                            size="small"
+                            onClick={() => {
+                                setEmailExist(false);
+                            }}
+                            >
+                                <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                        }
+                    >
+                        That email already exists! Please use a different one.
+                    </Alert>
+                </Collapse>
+            </Box>
             <Box display="flex" justifyContent="center">
                 <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
             </Box>
@@ -106,8 +129,8 @@ const Email = () => {
                 <Recaptcha
                     sitekey={process.env.RECAPTCHA_SITE_KEY}
                     render="explicit"
-                    onloadCallback={recaptchaLoaded}
                     verifyCallback={verify}
+                    onloadCallback={recaptchaLoaded}
                     size="compact"
                 />
             </Box>
@@ -115,9 +138,9 @@ const Email = () => {
         </form>
 
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="success">
+            <SuccessfulAlert onClose={handleClose} severity="success">
             Sign-up successful!
-            </Alert>
+            </SuccessfulAlert>
         </Snackbar>
 
     </>
