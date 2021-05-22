@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import {TextField, Button, Box, Snackbar, IconButton, Collapse} from "@material-ui/core"
+import cookie from 'js-cookie'
+import {TextField, Button, Box, Snackbar, IconButton, Collapse, Typography} from "@material-ui/core"
 import Alert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import Recaptcha from "react-recaptcha";
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import {useDispatch, useSelector} from 'react-redux'
+import {brown} from "@material-ui/core/colors"
 import { makeStyles } from '@material-ui/core/styles';
 import database from '../firebase/firebase';
 import {getEmailfromDB} from '../actions/email'
@@ -21,12 +23,8 @@ const useStyles = makeStyles(() => ({
         letterSpacing: "3px"
     },
 
-    recaptcha: {
-        '& div': {
-            '& iframe': {
-                width: "500px"
-            }
-        }
+    message: {
+        color: brown[600]
     }
 
 }))
@@ -39,6 +37,7 @@ const Email = () => {
     const [verified, setVerified] = useState(false)
     const [emailExist, setEmailExist] = useState(false)
 
+    const session = cookie.get("token") !== undefined
 
     interface RootState {
         Email: [{
@@ -81,6 +80,7 @@ const Email = () => {
         } else {
             try {
                 database.ref('Veganafrica').push(emailData)
+                cookie.set("token", "subscribed")
                 setEmail('')
                 setEmailExist(false)
                 setOpen(true)
@@ -123,17 +123,21 @@ const Email = () => {
                 </Collapse>
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>SIGN UP</Button>
             </Box>
-             <Box display="flex" justifyContent="center">
-                <Recaptcha
-                    sitekey={process.env.RECAPTCHA_SITE_KEY}
-                    render="explicit"
-                    verifyCallback={verify}
-                    onloadCallback={recaptchaLoaded}
-                    size="compact"
-                />
-            </Box>
+            {session ? (
+                <Typography className={classes.message} variant="subtitle1">Thank you for signing up!</Typography>
+            ) : (
+                <Box display="flex" justifyContent="center">
+                    <Recaptcha
+                        sitekey={process.env.RECAPTCHA_SITE_KEY}
+                        render="explicit"
+                        verifyCallback={verify}
+                        onloadCallback={recaptchaLoaded}
+                        size="compact"
+                    />
+                </Box>
+            )}
 
         </form>
 
