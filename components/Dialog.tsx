@@ -1,12 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Box, Button, Avatar} from '@material-ui/core'
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemText from '@material-ui/core/ListItemText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Dialog from '@material-ui/core/Dialog';
+import {Box, Button, Avatar, List, ListItem, ListItemAvatar, ListItemText, DialogTitle, Dialog} from '@material-ui/core'
 import TelegramIcon from '@material-ui/icons/Telegram';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import { blue } from '@material-ui/core/colors';
@@ -41,7 +35,7 @@ function SimpleDialog(props: SimpleDialogProps) {
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
         <Box p="1.5rem">
-            <DialogTitle id="simple-dialog-title">Let's chat</DialogTitle>
+            <DialogTitle id="simple-dialog-title">Reach out to get involved as a collaborator, advisor or donor!</DialogTitle>
             <List>
                 <ListItem button onClick={handleClose} component="a" href="https://api.whatsapp.com/send/?phone=+254796649562&text&app_absent=0&lang=en" target="_blank">
                         <ListItemAvatar>
@@ -53,7 +47,7 @@ function SimpleDialog(props: SimpleDialogProps) {
                 </ListItem>
                 <ListItem autoFocus button onClick={handleClose}  component="a" href="https://t.me/vaf_sunny" target="_blank">
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar className={classes.avatar}>
                         <TelegramIcon />
                         </Avatar>
                     </ListItemAvatar>
