@@ -38,12 +38,20 @@ const useStyles = makeStyles(theme => ({
     chat: {
         display: "flex",
         justifyContent: "flex-end",
-        padding: "0.5rem 0"
+        padding: "0.5rem 0",
+        [theme.breakpoints.down('xs')]: {
+            paddingRight: "0.3rem"
+        }
     },
     title: {
         padding: "0.8rem 0",
+        display: "flex",
+        height: "100%",
+        alignItems: "center",
         [theme.breakpoints.down('xs')]: {
-            padding: "0.1rem 0.4rem"
+            padding: "0.5rem 0.4rem",
+            fontSize: "0.8rem",
+            display: "block",
         }
     }
 }))
@@ -53,10 +61,10 @@ const Footer = () => {
     return (
         <AppBar position="fixed" color="default" className = {classes.appBar}>
             <Grid container>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={4}>
                 <Typography className={classes.title}>Vegan<span className={classes.span}>Africa</span>Fund © 2021</Typography>
                 </Grid>
-                <Grid className={classes.list} item xs={3} md={4}>
+                <Grid className={classes.list} item xs={4}>
                     <List className={classes.list}>
                         <ListItem className={classes.listItem} component="a" href="https://www.twitter.com/" target="_blank">
                         <img className={classes.social} alt="instagram" src="/images/twitter.png" />
@@ -66,7 +74,7 @@ const Footer = () => {
                         </ListItem>
                     </List>
                 </Grid>
-                <Grid className={classes.chat} item xs={4} md={4}>
+                <Grid className={classes.chat} item xs={4}>
                 <SimpleDialogDemo />
                 </Grid>
             </Grid>

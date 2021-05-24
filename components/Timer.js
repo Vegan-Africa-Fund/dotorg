@@ -53,7 +53,7 @@ const Timer = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countDownDate = new Date('May 31, 2021 00:00:00').getTime();
+        const countDownDate = new Date('May 27, 2021 08:00:00').getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();

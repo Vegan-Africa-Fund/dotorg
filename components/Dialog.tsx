@@ -35,7 +35,7 @@ function SimpleDialog(props: SimpleDialogProps) {
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
         <Box p="1.5rem">
-            <DialogTitle id="simple-dialog-title">Reach out to get involved as a collaborator, advisor or donor!</DialogTitle>
+            <DialogTitle id="simple-dialog-title">Let's chat</DialogTitle>
             <List>
                 <ListItem button onClick={handleClose} component="a" href="https://api.whatsapp.com/send/?phone=+254796649562&text&app_absent=0&lang=en" target="_blank">
                         <ListItemAvatar>
