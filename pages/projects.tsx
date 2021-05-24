@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Box, Typography, Divider, Grid, Avatar} from '@material-ui/core';
 import { deepPurple } from '@material-ui/core/colors';
@@ -61,9 +61,12 @@ const CurrentProjects = () => {
             <Box className={classes.project}>
               <Avatar className={classes.purple}>{project.index}</Avatar>
             <Box ml="1.5rem">
-              <Typography variant="h6">{project.name}</Typography>
+               <Typography variant="h6" component="a" href={project.url} target="_blank">{project.name}</Typography>
               <Typography className={classes.statement} variant="body2">{project.info}</Typography>
             </Box>
+            </Box>
+            <Box display={{ xs: 'block', sm: 'none' }} mt="1rem">
+              <Divider />
             </Box>
           </Grid>
         ))}

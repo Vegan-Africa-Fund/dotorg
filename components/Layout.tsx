@@ -34,8 +34,8 @@ const useStyles = makeStyles(theme => ({
     '& h4:nth-child(4)': {
       borderRight: "1px solid black"
     },
-    '& div' : {
-      width: "20%",
+    '& section' : {
+      width: "5rem",
       textAlign: "center",
       '& p:first-child': {
         fontFamily: "MoonTime",
@@ -57,12 +57,25 @@ const useStyles = makeStyles(theme => ({
           fontSize: "1rem",
           right: "0.3rem"
         }
+      },
+    },
+    '& img': {
+      width: "40px",
+      height: "40px",
+      position: "relative",
+      top: "0.7rem",
+      [theme.breakpoints.up('md')] : {
+        display: "none"
       }
     },
     [theme.breakpoints.down('sm')] : {
       justifyContent: "space-between",
       width: "90%"
     }
+  },
+
+  menuIcon: {
+    paddingTop: "0"
   }
 }))
 
@@ -88,8 +101,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
     </Head>
     <header>
       <nav className= {classes.nav}>
-        <Box display={{ xs: 'block', md: 'none' }}>
-        <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Box display={{ xs: 'flex', md: 'none' }} flexGrow={1}>
+        <IconButton className={classes.menuIcon} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
           <MenuIcon fontSize="large"/>
         </IconButton>
         <Menu
@@ -110,10 +123,11 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
         <Link href="/"><h4>Home</h4></Link>
         <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="/invest"><h4>Invest</h4></Link>
-        <div>
+        <img alt="vegan" src="/images/veganLogo.png" />
+        <section>
           <Link href="/"><p>Vegan</p></Link>
           <Link href="/"><p>A F</p></Link>
-          </div>
+          </section>
         <Link href="/team"><h4>Meet the team</h4></Link>
         <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="/projects"><h4>Projects</h4></Link>

@@ -68,7 +68,7 @@ const IndexPage = () => {
   const classes = useStyles();
   return (
   <>
-    <Layout title="Home | VeganAfrica">
+    <Layout title="Home | Vegan AF">
       <Grid container>
         <Grid item xs={12}>
           <Paper className={classes.statement} elevation={0} >
