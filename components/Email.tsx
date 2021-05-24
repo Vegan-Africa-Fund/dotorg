@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import cookie from 'js-cookie'
+import React, {useState, useEffect} from 'react';
+import cookie from 'js-cookie';
 import {TextField, Button, Box, Snackbar, IconButton, Collapse, Typography} from "@material-ui/core"
 import Alert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
@@ -36,6 +36,8 @@ const Email = () => {
     const [open, setOpen] = useState(false)
     const [verified, setVerified] = useState(false)
     const [emailExist, setEmailExist] = useState(false)
+    const [geoDetails, setGeoDetails] = useState({IPv4: ''})
+
 
     const session = cookie.get("token") !== undefined
 
@@ -50,7 +52,12 @@ const Email = () => {
 
     useEffect(() => {
          dispatch(getEmailfromDB())
+         fetch("https://geolocation-db.com/json/ef6c41a0-9d3c-11eb-8f3b-e1f5536499e7")
+         .then(res => res.json())
+         .then(data => setGeoDetails(data))
     }, [])
+
+    console.log(geoDetails.IPv4)
 
     const SuccessfulAlert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -59,6 +66,7 @@ const Email = () => {
     const handleClose = () => {
         setOpen(false)
       }
+    
 
     const emailData = {
         email
@@ -80,7 +88,6 @@ const Email = () => {
         } else {
             try {
                 database.ref('Veganafrica').push(emailData)
-                cookie.set("token", "subscribed")
                 setEmail('')
                 setEmailExist(false)
                 setOpen(true)
@@ -123,7 +130,7 @@ const Email = () => {
                 </Collapse>
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
             </Box>
             {session ? (
                 <Typography className={classes.message} variant="subtitle1">Thank you for signing up!</Typography>
