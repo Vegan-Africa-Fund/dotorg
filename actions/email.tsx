@@ -1,23 +1,22 @@
 import database from '../firebase/firebase';
 
-const addEmail = (emailInfo: {id: string | null, email: string}) => ({
+const addEmail = (emailInfo: {id: string | null, email: string, ipAddress: string}) => ({
     type: 'ADD_EMAIL',
     emailInfo
 })
 
-export const addEmailToDB = (emailData: {email: string}) => {
+export const addEmailToDB = (emailData: {email: string, ipAddress: string}) => {
     return (dispatch: any) => {
-        const {email} = emailData
-        database.ref('Veganafrica').push(email).then((ref) =>{
+        database.ref('Veganafrica').push(emailData).then((ref) =>{
             dispatch(addEmail({
                 id: ref.key,
-                email
+                ...emailData
             }))
         })
     }
 }
 
-const fetchEmail = (emailData: [{id: string | null, email: string}]) => ({
+const fetchEmail = (emailData: [{id: string | null, email: string, ipAddress: string}]) => ({
     type: 'FETCH_EMAIL',
     emailData
 })
@@ -25,7 +24,7 @@ const fetchEmail = (emailData: [{id: string | null, email: string}]) => ({
 export const getEmailfromDB = () => (
     (dispatch: any) => {
         return database.ref('Veganafrica').once('value').then((snapshot) => {
-            const Emails: [{id: string | null, email: string}] = [{id: '', email: ''}]
+            const Emails: [{id: string | null, email: string, ipAddress: string}] = [{id: '', email: '', ipAddress: ''}]
             snapshot.forEach((childSnapshot) => {
                 Emails.push({
                     id: childSnapshot.key,

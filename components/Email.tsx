@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import cookie from 'js-cookie';
 import {TextField, Button, Box, Snackbar, IconButton, Collapse, Typography} from "@material-ui/core"
 import Alert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
@@ -8,8 +7,7 @@ import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import {useDispatch, useSelector} from 'react-redux'
 import {brown} from "@material-ui/core/colors"
 import { makeStyles } from '@material-ui/core/styles';
-import database from '../firebase/firebase';
-import {getEmailfromDB} from '../actions/email'
+import {getEmailfromDB, addEmailToDB} from '../actions/email'
 
 
 const useStyles = makeStyles(() => ({
@@ -39,11 +37,10 @@ const Email = () => {
     const [geoDetails, setGeoDetails] = useState({IPv4: ''})
 
 
-    const session = cookie.get("token") !== undefined
-
     interface RootState {
         Email: [{
-            email: string
+            email: string,
+            ipAddress: string
         }]
     }
 
@@ -57,7 +54,7 @@ const Email = () => {
          .then(data => setGeoDetails(data))
     }, [])
 
-    console.log(geoDetails.IPv4)
+    const session = allEmails.filter(item => item.ipAddress === geoDetails.IPv4).length === 3
 
     const SuccessfulAlert = (props: AlertProps) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -69,7 +66,8 @@ const Email = () => {
     
 
     const emailData = {
-        email
+        email,
+        ipAddress: geoDetails.IPv4
     }
 
     const recaptchaLoaded = () => {
@@ -87,7 +85,7 @@ const Email = () => {
             setEmailExist(true)
         } else {
             try {
-                database.ref('Veganafrica').push(emailData)
+                dispatch(addEmailToDB(emailData))
                 setEmail('')
                 setEmailExist(false)
                 setOpen(true)
@@ -130,10 +128,10 @@ const Email = () => {
                 </Collapse>
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified}>SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>SIGN UP</Button>
             </Box>
             {session ? (
-                <Typography className={classes.message} variant="subtitle1">Thank you for signing up!</Typography>
+                <Typography className={classes.message} variant="subtitle1">You have surpassed the three sign ups limit. Thank you.</Typography>
             ) : (
                 <></>
             )}
