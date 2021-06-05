@@ -7,6 +7,8 @@ import Mission from '../components/Mission';
 import Timer from '../components/Timer';
 import Statement from '../components/Statement';
 import WhatWeDo from '../components/WhatWeDo';
+import Letter from '../components/Letter';
+
 const useStyles = makeStyles(theme => ({
   email: {
     padding: "0.8rem",
@@ -56,6 +58,14 @@ const useStyles = makeStyles(theme => ({
     margin: "1rem auto",
     width: "90%",
     padding: "1.5rem"
+  },
+  letter: {
+    margin: "1rem auto",
+    width: "50%",
+    padding: "1rem 2.5rem 2rem 2.5rem",
+    [theme.breakpoints.down('xs')] : {
+      width: "90%"
+    }
   }
 }))
 
@@ -68,6 +78,11 @@ const IndexPage = () => {
         <Grid item xs={12}>
           <Paper className={classes.statement} elevation={0} >
             <Statement />
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper className={classes.letter} elevation={0}>
+            <Letter />
           </Paper>
         </Grid>
         <Grid item xs={12}>

@@ -38,6 +38,11 @@ a {
 }
 
 @font-face {
+    font-family: "FuturaMediumItalic";
+    src: url("/fonts/futuraMediumItalic.ttf")
+}
+
+@font-face {
     font-family: "JosefinSansLight";
     src: url("/fonts/JosefinSans-Light.ttf")
 }
