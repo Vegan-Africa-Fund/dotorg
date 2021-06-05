@@ -7,6 +7,11 @@ html, body {
     overflow-y: auto;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
 @font-face {
     font-family: "MoonTime";
     src: url("/fonts/moontime.ttf")
@@ -30,4 +35,14 @@ html, body {
 @font-face {
     font-family: "FuturaBold";
     src: url("/fonts/futuraBold.ttf")
+}
+
+@font-face {
+    font-family: "JosefinSansLight";
+    src: url("/fonts/JosefinSans-Light.ttf")
+}
+
+@font-face {
+    font-family: "JosefinSansBold";
+    src: url("/fonts/JosefinSans-Bold.ttf")
 }

@@ -39,11 +39,6 @@ const useStyles = makeStyles(theme => ({
     } 
   },
 
-  contentText: {
-    fontFamily: "FuturaBold",
-    fontSize: "1.5rem"
-  },
-
   dialog: {
     backgroundColor: "#48644c",
     padding: "3rem"
