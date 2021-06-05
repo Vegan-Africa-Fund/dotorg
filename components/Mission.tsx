@@ -14,6 +14,10 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')] : {
             fontSize: "1.2rem",
             width: "100%"
+        },
+        '& span' : {
+            textDecoration: "underline",
+            color: "#89cff0"
         }
     },
 
@@ -54,8 +58,8 @@ const Mission = () => {
     const classes = useStyles();
     return (
         <Box display="flex" bgcolor="#88a384" className={classes.rightBox} flexDirection="column" p="1rem 0">
-            <Typography className={classes.content} variant="body2">The Vegan Africa Fund invests in Vegan owned and operated businesses in Africa</Typography>
-            <Typography className={classes.content} variant="body2">Vegan AF helps businesses build community, raise awareness, expand in all directions, and most importantly...make more vegans!</Typography>
+            <Typography className={classes.content} variant="body2">Vegan AF acts as a vegan hedge fund, with operations focused on buying, holding, and helping vegan companies succeed in Africa.</Typography>
+            <Typography className={classes.content} variant="body2">Check out our <span><a href="https://veganafricafund.medium.com/" target="_blank">blog posts</a></span> to keep up with what we are doing!</Typography>
         </Box>
     )
 }

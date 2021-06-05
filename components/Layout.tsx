@@ -14,11 +14,12 @@ type Props = {
 const useStyles = makeStyles(theme => ({
   nav: {
     display: "flex",
-    width: "100%",
+    width: "80%",
     justifyContent: "space-around",
+    margin: "0 auto",
     '& h4': {
       borderLeft: "1px solid black",
-      width: "12%",
+      width: "15%",
       textAlign: "center",
       fontSize: "1rem",
       fontWeight: "400",
@@ -60,12 +61,14 @@ const useStyles = makeStyles(theme => ({
       },
     },
     '& img': {
-      width: "40px",
-      height: "40px",
+      width: "80px",
+      height: "80px",
       position: "relative",
-      top: "0.7rem",
-      [theme.breakpoints.up('md')] : {
-        display: "none"
+      top: "0.5rem",
+      [theme.breakpoints.down('sm')] : {
+        width: "40px",
+        height: "40px",
+        top: "0"
       }
     },
     [theme.breakpoints.down('sm')] : {
@@ -125,10 +128,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
         <Link href="/donate"><h4>Donate</h4></Link>
         <Link href="/invest"><h4>Invest</h4></Link>
         <img alt="vegan" src="/images/veganLogo.png" />
-        <section>
-          <Link href="/"><p>Vegan</p></Link>
-          <Link href="/"><p>A F</p></Link>
-          </section>
         <Link href="/team"><h4>Meet the team</h4></Link>
         <Link href="/whitepaper"><h4>White Paper</h4></Link>
         <Link href="/projects"><h4>Projects</h4></Link>

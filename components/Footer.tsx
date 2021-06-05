@@ -66,7 +66,7 @@ const Footer = () => {
                 </Grid>
                 <Grid className={classes.list} item xs={4}>
                     <List className={classes.list}>
-                        <ListItem className={classes.listItem} component="a" href="https://blog.veganafricafund.org/" target="_blank">
+                        <ListItem className={classes.listItem} component="a" href="https://veganafricafund.medium.com/" target="_blank">
                         <img className={classes.social} alt="medium" src="/images/medium.png" />
                         </ListItem>
                         <ListItem className={classes.listItem} component="a" href="https://twitter.com/veganafricafund?s=08" target="_blank">

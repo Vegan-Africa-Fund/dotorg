@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Paper, Box, Typography} from '@material-ui/core'
+import {Grid, Paper, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import Email from '../components/Email';
@@ -17,13 +17,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')] : {
       width: "100%",
       margin: "0 1rem"
-    }
-  },
-
-  emailTitle: {
-    width: "30%",
-    [theme.breakpoints.down('sm')] : {
-      width: "100%"
     }
   },
 
@@ -102,7 +95,6 @@ const IndexPage = () => {
         </Grid>
         <Grid item xs={12}>
           <Box display="flex" flexDirection="column" marginY="2rem" alignItems="center" >
-          <Typography variant="h6" align="center" className={classes.emailTitle}>Reach out to get involved as a collaborator, advisor or donor!</Typography>
             <Paper variant="outlined" square className={classes.email}>
               <Email />
             </Paper>

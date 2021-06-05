@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import {Box, Typography, Divider, Grid, Button} from '@material-ui/core';
+import {Box, Typography, Divider, Grid, Button, Avatar} from '@material-ui/core';
 import { deepPurple } from '@material-ui/core/colors';
 import Layout from '../components/Layout';
 
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     },
     employeeImage: {
         width: "216px",
-        height: "217px"
+        height: "217px",
     },
 
     divider: {
@@ -77,6 +77,28 @@ const useStyles = makeStyles(theme => ({
     showLess: {
         paddingLeft: "0",
         color: deepPurple[500]
+    },
+
+    advisorImage: {
+        width: "176px",
+        height: "177px"
+    },
+
+    advisor : {
+        width: "80%",
+        margin: "2rem auto",
+        [theme.breakpoints.down('sm')]: {
+            width: "100%",
+            flexDirection: "column",
+            alignItems: "center",
+            display: "flex"
+        }
+    },
+    advisorSubtitle : {
+        marginLeft: "3.5rem",
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: "0"
+        }
     }
 }))
 
@@ -130,10 +152,18 @@ const Team = () => {
             <Box className={classes.employee}>
                 <img className={classes.employeeImage} alt="marketing-head" src="/images/Wendy.webp" />
                 <Box className={classes.bodyContent}>
-                    <Typography variant="h6">Wendy Matheka</Typography>
-                    <Typography variant="subtitle2">Head of Digital</Typography>
+                    <Typography variant="h5">Wendy Matheka</Typography>
+                    <Typography variant="h6">Head of Digital</Typography>
                     <Typography className={classes.statement} variant="body1">I create content, manage social media, and manage the overall digital presence of Vegan AF. I got involved because I’m passionate about veganism, and creating awareness is the first step to lasting change. We live on a meat-centric continent and I'm excited to be part of the solution. I'm passionate about helping create the  platform, society and community that I needed for support when I went vegan. I hope to see a more compassionate, conscious Africa and world where we live more sustainably, respect life and our planet and improve the world for the generations to come.</Typography>
                 </Box>
+            </Box>
+        <Divider />
+            <Box className={classes.advisor}>
+                <Avatar className={classes.advisorImage} alt="advisor" src="/images/Ezra.jpg" />
+                <Box mt={2}>
+                <Typography variant="h5">Ezra Fesihatsion</Typography>
+                </Box>
+                <Typography className={classes.advisorSubtitle} variant="h6">Advisor</Typography>
             </Box>
         </Layout>
     )

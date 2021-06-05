@@ -53,7 +53,7 @@ const Timer = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countDownDate = new Date('June 02, 2021 08:00:00').getTime();
+        const countDownDate = new Date('July 01, 2021 08:00:00').getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -86,7 +86,7 @@ const Timer = () => {
     return (
         <>
             <Typography className={classes.title} variant="h5" align="center">
-                VEGANAF token presale starts in:
+              VAF Public Sale Launch:
             </Typography>
             <Box display="flex" className = {classes.timer}>
                 <section>

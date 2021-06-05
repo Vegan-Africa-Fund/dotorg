@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
     button: {
         color: "#f8fff7",
-        fontSize: "1.5rem",
+        fontSize: "0.875rem",
         letterSpacing: "3px"
     },
 
@@ -128,7 +128,9 @@ const Email = () => {
                 </Collapse>
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>SIGN UP</Button>
+                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>
+                Reach out to get involved as a collaborator, advisor or donor!
+                </Button>
             </Box>
             {session ? (
                 <Typography className={classes.message} variant="subtitle1">You have surpassed the three sign ups limit. Thank you.</Typography>
