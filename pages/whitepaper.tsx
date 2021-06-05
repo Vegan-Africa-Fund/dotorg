@@ -1,5 +1,6 @@
 import {Paper, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import Link from 'next/link'
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -58,6 +59,13 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "JosefinSansBold",
         color: "#88a283",
         textAlign: "center"
+    },
+
+    link: {
+        textDecoration: "underline",
+        cursor: "pointer",
+        fontSize: "0.9rem",
+        color: "#88a283"
     }
 
 }))
@@ -68,6 +76,9 @@ const WhitePaper = () => {
     return (
         <section className={classes.section}>
             <Paper className={classes.paper}>
+                <Link href="/">
+                    <h5 className={classes.link}>Go to Homepage</h5>
+                </Link>
                 <h3>Tokenomics Summary</h3>
                 <p>
                 The Vegan Africa Fund (Vegan AF) is sustainably scaling plant-based businesses in a decentralized manner. VAF is the native token of the Vegan AF network, serving as an impact token enabling co-operation of vegan individuals and businesses through the VAF token economy. Purchasing VAFs allows Vegan AF to strategically acquire, hold, assist, and form companies aligned with our mission. Vegan AF acts as a vegan impact fund, with operations focused on helping vegan companies succeed. For every 10 VAFs purchased, 1 VAF will be distributed to the Community Development Fund or as part of the Vegan AF rewards program. As the Vegan AF network expands, VAF tokens can be redeemed for goods and services from partnered operations. The VAF token provides proof of impact, where the token usage can be tied to sustainable operations in Africa and our increasing market share in the growing value of the vegan economy. VAF tokens will grow in value as the companies Vegan AF supports grow in value. Our mission is to make plant-based options plentiful, delicious, local, and sustainable, while making the plant-based evolution accessible to the fastest-growing continent on Earth. 
