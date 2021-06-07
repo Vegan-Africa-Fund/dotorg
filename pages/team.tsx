@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import {Box, Typography, Divider, Grid, Button, Avatar} from '@material-ui/core';
+import {Box, Typography, Divider, Grid, Button} from '@material-ui/core';
 import { deepPurple } from '@material-ui/core/colors';
 import Layout from '../components/Layout';
 
@@ -80,8 +80,8 @@ const useStyles = makeStyles(theme => ({
     },
 
     advisorImage: {
-        width: "176px",
-        height: "177px"
+        width: "116px",
+        height: "117px"
     },
 
     advisor : {
@@ -94,11 +94,19 @@ const useStyles = makeStyles(theme => ({
             display: "flex"
         }
     },
-    advisorSubtitle : {
-        marginLeft: "3.5rem",
+    statement2: {
+        fontFamily: "FuturaLight",
+        fontSize: "1rem",
         [theme.breakpoints.down('sm')]: {
-            marginLeft: "0"
+            textAlign: "start",
+            width: "95%",
+            margin: "0 auto"
         }
+    },
+
+    span: {
+        textDecoration: "underline",
+        color: "#88a283"
     }
 }))
 
@@ -158,12 +166,15 @@ const Team = () => {
                 </Box>
             </Box>
         <Divider />
-            <Box className={classes.advisor}>
-                <Avatar className={classes.advisorImage} alt="advisor" src="/images/Ezra.jpg" />
-                <Box mt={2}>
-                <Typography variant="h5">Ezra Fesihatsion</Typography>
+            <Box className={classes.employee}>
+                <img className={classes.advisorImage} alt="advisor" src="/images/Ezra.jpg" />
+                <Box className={classes.bodyContent}>
+                <Typography variant="h6">Ezra Fesihatsion</Typography>
+                <Typography variant="subtitle2">Advisor</Typography>
+                <Typography className={classes.statement2} variant="body1">
+                I was born in Addis Ababa, Ethiopia, where I attended business school and currently live. In 2011, I vowed to stop consuming and using animal products and joined the vegan movement. I began operating a 100% vegan restaurant in 2015 to serve vegan and non-vegan guests in Addis Ababa while promoting veganism to society at large. I am advising Vegan AF on operations and strategies, as I have helped many people on their plant-based journey and am aligned with the ultimate mission of making more vegans in the world. I began my vegan journey by exploring spiritual and philosophical teachings, and am especially inspired by <span className={classes.span}><a href="https://suprememastertv.com/en1/">Supreme Master Ching Hai’s television network</a></span> which promotes vegan and sustainable living, compassion, and ultimately enlightenment.
+                </Typography>
                 </Box>
-                <Typography className={classes.advisorSubtitle} variant="h6">Advisor</Typography>
             </Box>
         </Layout>
     )
