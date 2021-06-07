@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {TextField, Button, Box, Snackbar, IconButton, Collapse, Typography} from "@material-ui/core"
+import {TextField, Button, Box, Snackbar, IconButton, Collapse, Typography } from "@material-ui/core"
 import Alert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import Recaptcha from "react-recaptcha";
@@ -16,13 +16,21 @@ const useStyles = makeStyles(() => ({
     },
 
     button: {
-        color: "#f8fff7",
         fontSize: "0.875rem",
-        letterSpacing: "3px"
+        color: "#f8fff7",
     },
 
     message: {
         color: brown[600]
+    },
+
+    textField: {
+        margin: "0.4rem 0"
+    },
+    info: {
+        color: "#f8fff7",
+        fontSize: "1rem",
+        margin: "0.5rem"
     }
 
 }))
@@ -31,6 +39,8 @@ const useStyles = makeStyles(() => ({
 const Email = () => {
     const classes = useStyles();
     const [email, setEmail]=useState('')
+    const [name, setName]=useState('')
+    const [comment, setComment]=useState('')
     const [open, setOpen] = useState(false)
     const [verified, setVerified] = useState(false)
     const [emailExist, setEmailExist] = useState(false)
@@ -67,7 +77,9 @@ const Email = () => {
 
     const emailData = {
         email,
-        ipAddress: geoDetails.IPv4
+        name,
+        ipAddress: geoDetails.IPv4,
+        comment: comment === '' ? "No comment" : comment
     }
 
     const recaptchaLoaded = () => {
@@ -87,6 +99,8 @@ const Email = () => {
             try {
                 dispatch(addEmailToDB(emailData))
                 setEmail('')
+                setName('')
+                setComment('')
                 setEmailExist(false)
                 setOpen(true)
             } catch (err) {
@@ -105,7 +119,37 @@ const Email = () => {
             type="email"
             value={email}
             onChange={(e) =>{setEmail(e.target.value)}}
-            className={classes.input}
+            className={classes.textField}
+            InputProps={{
+                className: classes.input,
+            }}
+            />
+            <TextField
+            placeholder="Enter Your Name"
+            fullWidth
+            required
+            variant="outlined"
+            type="string"
+            value={name}
+            onChange={(e) =>{setName(e.target.value)}}
+            className={classes.textField}
+            InputProps={{
+                className: classes.input,
+            }}
+            />
+            <TextField
+            placeholder="Add a comment"
+            fullWidth
+            multiline
+            variant="outlined"
+            type="string"
+            value={comment}
+            rows={4}
+            onChange={(e) =>{setComment(e.target.value)}}
+            className={classes.textField}
+            InputProps={{
+                className: classes.input,
+            }}
             />
             <Box display="flex" justifyContent="center" mt="0.3rem">
                 <Collapse in={emailExist}>
@@ -128,9 +172,12 @@ const Email = () => {
                 </Collapse>
             </Box>
             <Box display="flex" justifyContent="center">
-                <Button className={classes.button} size="large" type="submit" disabled={!verified || session}>
-                Reach out to get involved as a collaborator, advisor or donor!
+                <Button className={classes.button} variant="contained" size="small" color="primary" type="submit" disabled={!verified || session}>
+                    Sign up
                 </Button>
+            </Box>
+            <Box display="flex" justifyContent="center">
+                <h6 className={classes.info}>Reach out to get involved as a collaborator, advisor or donor!</h6>
             </Box>
             {session ? (
                 <Typography className={classes.message} variant="subtitle1">You have surpassed the three sign ups limit. Thank you.</Typography>

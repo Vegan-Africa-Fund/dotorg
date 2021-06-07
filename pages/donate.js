@@ -33,6 +33,14 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')] : {
             marginTop: "2rem"
           } 
+    },
+
+    instructionsBox: {
+        width: "50%",
+        margin: "1rem auto 0 auto",
+        [theme.breakpoints.down('xs')] : {
+           width: "95%" 
+        }
     }
 }))
 
@@ -81,7 +89,9 @@ const Donate = () => {
                 </Link>
             </Box>
         <Typography className={classes.title} variant="h4" align="center">Donate to the Vegan Africa Fund</Typography>
+        <Box className={classes.instructionsBox}>
         <Typography variant="body2" component="p" align="center">Donate digital currency tokens to Vegan AF by clicking the icon representing the cryptocurrency of your choice, and copying our deposit address which comes up.</Typography>
+        </Box>
         <Grid container spacing={1} className={classes.grid}>
            {cryptoData.map(crypto => (
                <Grid item xs={3} sm={2} key={crypto.id}>

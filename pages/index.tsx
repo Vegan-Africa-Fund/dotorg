@@ -11,7 +11,7 @@ import Letter from '../components/Letter';
 
 const useStyles = makeStyles(theme => ({
   email: {
-    padding: "0.8rem",
+    padding: "2rem",
     width: "30%",
     backgroundColor: "#88a283",
     [theme.breakpoints.down('sm')] : {
@@ -95,7 +95,7 @@ const IndexPage = () => {
         </Grid>
         <Grid item xs={12}>
           <Box display="flex" flexDirection="column" marginY="2rem" alignItems="center" >
-            <Paper variant="outlined" square className={classes.email}>
+            <Paper variant="outlined" className={classes.email}>
               <Email />
             </Paper>
           </Box>

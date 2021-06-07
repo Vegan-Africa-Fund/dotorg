@@ -1,11 +1,11 @@
 import database from '../firebase/firebase';
 
-const addEmail = (emailInfo: {id: string | null, email: string, ipAddress: string}) => ({
+const addEmail = (emailInfo: {id: string | null, email: string, ipAddress: string, name: string, comment: string}) => ({
     type: 'ADD_EMAIL',
     emailInfo
 })
 
-export const addEmailToDB = (emailData: {email: string, ipAddress: string}) => {
+export const addEmailToDB = (emailData: {email: string, ipAddress: string, name: string, comment: string}) => {
     return (dispatch: any) => {
         database.ref('Veganafrica').push(emailData).then((ref) =>{
             dispatch(addEmail({
@@ -24,7 +24,7 @@ const fetchEmail = (emailData: [{id: string | null, email: string, ipAddress: st
 export const getEmailfromDB = () => (
     (dispatch: any) => {
         return database.ref('Veganafrica').once('value').then((snapshot) => {
-            const Emails: [{id: string | null, email: string, ipAddress: string}] = [{id: '', email: '', ipAddress: ''}]
+            const Emails: [{id: string | null, email: string, ipAddress: string, name: string, comment: string}] = [{id: '', email: '', ipAddress: '', name: '', comment: ''}]
             snapshot.forEach((childSnapshot) => {
                 Emails.push({
                     id: childSnapshot.key,

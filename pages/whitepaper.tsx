@@ -3,6 +3,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link'
 
 const useStyles = makeStyles(theme => ({
+    firstPaper: {
+        width: "60%",
+        margin: "1.5rem auto",
+        padding: "3rem 6rem 6rem 6rem",
+        [theme.breakpoints.down('xs')] : {
+            width: "100%",
+            padding: "2rem"
+        }
+    },
     paper: {
         width: "60%",
         margin: "1.5rem auto",
@@ -72,7 +81,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     topImage: {
-        width: "500px",
+        width: "700px",
         height: "auto",
         [theme.breakpoints.down('xs')] : {
             width: "300px"
@@ -84,6 +93,12 @@ const useStyles = makeStyles(theme => ({
             width: "300px",
             height: "auto"
         }
+    },
+
+    logo: {
+        width: "100px",
+        height: "100px",
+        cursor: "pointer"
     }
 
 }))
@@ -93,10 +108,12 @@ const WhitePaper = () => {
     const classes = useStyles();
     return (
         <section className={classes.section}>
-            <Paper className={classes.paper}>
-                <Link href="/">
-                    <h5 className={classes.link}>Go to Homepage</h5>
-                </Link>
+            <Paper className={classes.firstPaper}>
+                <Box display="flex" justifyContent="center">
+                    <Link href="/">
+                        <img alt="vegan" className={classes.logo} src="/images/veganTextLogo.png" />
+                    </Link>
+                </Box>
                 <Box  display="flex" justifyContent="center">
                 <img alt="whitepaper" className={classes.topImage} src="/images/whitepaper.png" />
                 </Box>

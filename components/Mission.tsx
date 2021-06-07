@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         },
         '& span' : {
             textDecoration: "underline",
-            color: "#89cff0"
+            color: "#414a4c"
         }
     },
 

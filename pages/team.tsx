@@ -167,11 +167,11 @@ const Team = () => {
             </Box>
         <Divider />
             <Box className={classes.employee}>
-                <img className={classes.advisorImage} alt="advisor" src="/images/Ezra.jpg" />
+                <img className={classes.employeeImage} alt="advisor" src="/images/Ezra.jpg" />
                 <Box className={classes.bodyContent}>
-                <Typography variant="h6">Ezra Fesihatsion</Typography>
-                <Typography variant="subtitle2">Advisor</Typography>
-                <Typography className={classes.statement2} variant="body1">
+                <Typography variant="h5">Ezra Fesihatsion</Typography>
+                <Typography variant="h6">Advisor</Typography>
+                <Typography className={classes.statement} variant="body1">
                 I was born in Addis Ababa, Ethiopia, where I attended business school and currently live. In 2011, I vowed to stop consuming and using animal products and joined the vegan movement. I began operating a 100% vegan restaurant in 2015 to serve vegan and non-vegan guests in Addis Ababa while promoting veganism to society at large. I am advising Vegan AF on operations and strategies, as I have helped many people on their plant-based journey and am aligned with the ultimate mission of making more vegans in the world. I began my vegan journey by exploring spiritual and philosophical teachings, and am especially inspired by <span className={classes.span}><a href="https://suprememastertv.com/en1/">Supreme Master Ching Hai’s television network</a></span> which promotes vegan and sustainable living, compassion, and ultimately enlightenment.
                 </Typography>
                 </Box>

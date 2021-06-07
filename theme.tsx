@@ -31,6 +31,11 @@ const theme = createMuiTheme({
           borderColor: "#f2fff0"
         },
       }
+    },
+    MuiTypography: {
+      body2: {
+        fontWeight: 500
+      }
     }
   }
 });
