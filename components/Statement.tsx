@@ -47,7 +47,7 @@ const Statement = () => {
                 <Avatar alt="Sunny" src="/images/Sunny.webp" className={classes.large} />
             </Box>
                 <Typography className={classes.paragraph} variant="body1">
-                “Veganism, historically, has been a technique adopted by concerned individuals doing their part to act ethically, improve health, and solve environmental issues. Vegan AF is utilizing veganism as a preventative approach to some of the world’s greatest challenges, and to restore the balance between human and nature.” <span className={classes.name}>- Sunny, Vegan AF Founder</span> 
+                “Veganism, historically, has been adopted by concerned individuals doing their part to act ethically, improve health, and solve environmental issues. Vegan AF is utilizing veganism as a strategy to meet some of the world’s greatest challenges, and to restore the balance between human and nature.” <span className={classes.name}>- Sunny, Vegan AF Founder</span> 
                 </Typography>
         </Box>
     )

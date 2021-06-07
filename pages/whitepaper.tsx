@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
         padding: "6rem",
         [theme.breakpoints.down('xs')] : {
             width: "100%",
-            padding: "4rem 0.5rem"
+            padding: "2rem"
         }
     },
 
@@ -35,7 +35,10 @@ const useStyles = makeStyles(theme => ({
         top: "4rem",
         display: "flex",
         justifyContent: "flex-end",
-        fontFamily: "JosefinSansBold"
+        fontFamily: "JosefinSansBold",
+        [theme.breakpoints.down('xs')] : {
+            top: "2rem"
+        }
     },
 
     span: {
@@ -66,6 +69,21 @@ const useStyles = makeStyles(theme => ({
         cursor: "pointer",
         fontSize: "0.9rem",
         color: "#88a283"
+    },
+
+    topImage: {
+        width: "500px",
+        height: "auto",
+        [theme.breakpoints.down('xs')] : {
+            width: "300px"
+        }
+    },
+
+    imageDimensions: {
+        [theme.breakpoints.down('xs')] : {
+            width: "300px",
+            height: "auto"
+        }
     }
 
 }))
@@ -79,12 +97,17 @@ const WhitePaper = () => {
                 <Link href="/">
                     <h5 className={classes.link}>Go to Homepage</h5>
                 </Link>
+                <Box  display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.topImage} src="/images/whitepaper.png" />
+                </Box>
+            </Paper>
+            <Paper className={classes.paper}>
                 <h3>Tokenomics Summary</h3>
                 <p>
                 The Vegan Africa Fund (Vegan AF) is sustainably scaling plant-based businesses in a decentralized manner. VAF is the native token of the Vegan AF network, serving as an impact token enabling co-operation of vegan individuals and businesses through the VAF token economy. Purchasing VAFs allows Vegan AF to strategically acquire, hold, assist, and form companies aligned with our mission. Vegan AF acts as a vegan impact fund, with operations focused on helping vegan companies succeed. For every 10 VAFs purchased, 1 VAF will be distributed to the Community Development Fund or as part of the Vegan AF rewards program. As the Vegan AF network expands, VAF tokens can be redeemed for goods and services from partnered operations. The VAF token provides proof of impact, where the token usage can be tied to sustainable operations in Africa and our increasing market share in the growing value of the vegan economy. VAF tokens will grow in value as the companies Vegan AF supports grow in value. Our mission is to make plant-based options plentiful, delicious, local, and sustainable, while making the plant-based evolution accessible to the fastest-growing continent on Earth. 
                 </p>
                 <Box display="flex" justifyContent="center">
-                <img alt="ceo" src="/images/Sunny.webp" />
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_2.png" />
                 </Box>
                 <h4 className={classes.footer}>1</h4>
             </Paper>
@@ -93,7 +116,11 @@ const WhitePaper = () => {
                 <p>Complete ecological breakdown is the greatest threat to humanity, and it’s happening in front of our eyes. Destructive industrialization and dependence on livestock agriculture have caused severe environmental damage, and these harmful practices are rapidly expanding in Africa <span className={classes.span}><a href="https://www.dropbox.com/sh/yd8l2v0u4jqptp3/AACpraYjOYWpTxAFv5H-2vrKa/1%20Global%20Assessment%20Summary%20for%20Policymakers?dl=0&preview=Summary+for+Policymakers+IPBES+Global+Assessment.pdf&subfolder_nav_tracking=1">(Diaz, Setelle, Brondizio, et al.)</a></span>.
                 Humans must move forward on the solution path by rejecting the problem path and abandoning harmful practices. The greatest impact will come from massive societal shifts towards sustainability, and adopting a plant-based diet is shown to be the most impactful action the average  individual can take to fight climate change <span className={classes.span}><a href="https://www.ipcc.ch/site/assets/uploads/sites/2/2019/06/SR15_Full_Report_High_Res.pdf">(IPCC)</a></span>.Vegan AF seeks to make this lifestyle shift accessible to anyone who wishes to adopt it on the African continent.</p>
                 <p>The African population is projected to nearly quadruple from 1.2 billion today to over 4 billion in the next century <span className={classes.span}><a href="https://www.worldbank.org/en/region/afr/overview">(World Bank)</a></span>.
-                That's a lot more people to feed; in fact, Africa is growing faster than any other continent. How we increase food production must be rooted in regeneration instead of destruction, especially encouraging food forests to regenerate the earth.</p>
+                That's a lot more people to feed; in fact, Africa is growing faster than any other continent. How we increase food production must be rooted in regeneration instead of destruction, especially encouraging food forests to regenerate the earth.
+                </p>
+                <Box display="flex" justifyContent="center">
+                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_3.png" />
+                </Box>
                 <Box textAlign="center">
                 <h4 className={classes.span}><a href="https://ourworldindata.org/future-population-growth">Current Population Vs. Projected Population By Continent</a></h4>
                 </Box>
@@ -101,7 +128,12 @@ const WhitePaper = () => {
             </Paper>
             <Paper className={classes.paper}>
             <h2>INTRODUCTION</h2>
-            <p>Rainforests in Congo and throughout Africa are being slashed for industrial and agricultural expansion. Animal agriculture is largely responsible for the rapid depletion of resources that could otherwise be used to end world hunger <span className={classes.span}><a href="https://www.cifor.org/publications/pdf_files/OccPapers/OP-144.pdf">(Tchatchou et. al)</a></span>.</p>
+            <p>
+                Rainforests in Congo and throughout Africa are being slashed for industrial and agricultural expansion. Animal agriculture is largely responsible for the rapid depletion of resources that could otherwise be used to end world hunger <span className={classes.span}><a href="https://www.cifor.org/publications/pdf_files/OccPapers/OP-144.pdf">(Tchatchou et. al)</a></span>.
+            </p>
+            <Box display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_4.png" />
+            </Box>
             <Box textAlign="center">
             <h4 className={classes.span}><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/65505/6316-drivers-deforestation-report.pdf">Causes of Deforestation in the Congo Rainforest</a></h4>
             </Box>
@@ -123,6 +155,10 @@ const WhitePaper = () => {
             </Paper>
             <Paper className={classes.paper}>
                 <h2>TOKEN DISTRIBUTION</h2>
+                <Box display="flex" justifyContent="center">
+                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_5.png" />
+                </Box>
+                <h4 className={classes.caption}>VAF Token Allocation</h4>
                 <dl>
                     <dt className={classes.dt}>
                         <p>Presale:</p>
@@ -181,6 +217,9 @@ const WhitePaper = () => {
             <Paper className={classes.paper}>
             <h2>TOKEN DISTRIBUTION</h2>
             <p>The schedule of unlocking dates for each of these sections outlined in the Roadmap below.</p>
+            <Box display="flex" justifyContent="center">
+                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_6.png" />
+            </Box>
             <h4 className={classes.caption}>Roadmap for Token Distribution</h4>
             <h4 className={classes.footer}>6</h4>
             </Paper>
@@ -216,18 +255,35 @@ const WhitePaper = () => {
                 </dd>
             </dl>
             <h2>OPERATIONS STRATEGY</h2>
-            <p>As the vegan economy grows in Africa, Vegan AF will be at the forefront. Funds raised through the VAF token pre-sale and public sale will be allocated to the following funds: Partnership and Strategic Investment Fund, Technical and Platform Engineering Fund, Research and Development, Operations, Marketing, Social Impact Initiatives, and Legal. Investments made by Vegan AF into African businesses will result in Vegan AF acquiring shares of those companies, making up the Vegan AF portfolio. The investments will come with an option to purchase shares back at a later date, at an increased price. Share buyback funds will go back into the Vegan AF funds pool to support further investments in Vegan AF businesses.</p>
+            <p>As the vegan economy grows in Africa, Vegan AF will be at the forefront. Funds raised through the VAF token pre-sale and public sale will be allocated to the following funds: Partnership and Strategic Investment Fund, Technical and Platform Engineering Fund, Research and Development, Operations, Marketing, Social Impact Initiatives, and Legal. Investments made by Vegan AF into African businesses will result in Vegan AF acquiring shares of those companies, making up the Vegan AF portfolio. The investments will come with an option to purchase shares back at a later date, at an increased price. Share buyback funds will go back into the Vegan AF funds pool to support further investments in Vegan AF businesses.
+            </p>
+            <Box display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_7.png" />
+            </Box>
             <h4 className={classes.caption}>Vegan AF Funds Distribution</h4>
             <h4 className={classes.footer}>7</h4>
             </Paper>
             <Paper className={classes.paper}>
             <h2>OPERATIONS STRATEGY</h2>
-            <p>The Partnership and Strategic Investment Fund makes up the largest portion of the funds allocated from VAF sales. The fund includes support for high-growth operations as well as projects Vegan AF believes we can turn into high-growth operations.</p>
+            <p>
+                The Partnership and Strategic Investment Fund makes up the largest portion of the funds allocated from VAF sales. The fund includes support for high-growth operations as well as projects Vegan AF believes we can turn into high-growth operations.
+            </p>
+            <Box display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_8.png" />
+            </Box>
+            <Box display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_9.png" />
+            </Box>
             <h4 className={classes.footer}>8</h4>
             </Paper>
             <Paper className={classes.paper}>
-            <h2>SOURCES</h2>
-            <p>The token release schedule involves minting 1 trillion VAF tokens during the network’s genesis transaction. These will immediately be divided into 5 separate holding wallets respective to the 5 functions: presale, public sale, liquidity, development team, and community development fund. The tokens will be unlocked given the below schedule, where at the time of unlocking they are sold (presale, public sale and liquidity) or allocated to the team or community.</p>
+            <h2>TOKEN UNLOCKING</h2>
+            <p>
+                The token release schedule involves minting 1 trillion VAF tokens during the network’s genesis transaction. These will immediately be divided into 5 separate holding wallets respective to the 5 functions: presale, public sale, liquidity, development team, and community development fund. The tokens will be unlocked given the below schedule, where at the time of unlocking they are sold (presale, public sale and liquidity) or allocated to the team or community.
+            </p>
+            <Box display="flex" justifyContent="center">
+                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_10.png" />
+            </Box>
             <h4 className={classes.caption}>VAF 4-Year Token Unlocking Schedule</h4>
             <h2>DONATING TO VEGAN AF</h2>
             <p>The Vegan AF team began accepting donations in April 2021 and will continue to accept donations to enhance fund operations and capabilities. Donations may be made by those who are interested in seeing the Vegan AF mission succeed but are not interested in being token holders, token holders who want to increase their support for Vegan AF, or by those who cannot purchase VAF tokens due to international regulations. We appreciate all donations made and your amazing support of Vegan AF. We are excited to change the world with you.</p>
