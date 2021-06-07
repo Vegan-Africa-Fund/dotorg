@@ -1,9 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Box, Button, Avatar, List, ListItem, ListItemAvatar, ListItemText, DialogTitle, Dialog} from '@material-ui/core'
+import {Box, IconButton, Avatar, List, ListItem, ListItemAvatar, ListItemText, DialogTitle, Dialog} from '@material-ui/core'
 import TelegramIcon from '@material-ui/icons/Telegram';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import { blue } from '@material-ui/core/colors';
+
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 const useStyles = makeStyles({
@@ -14,7 +16,7 @@ const useStyles = makeStyles({
 
   spacing: {
       padding: "1.5rem"
-  }
+  },
 });
 
 export interface SimpleDialogProps {
@@ -74,9 +76,9 @@ export default function SimpleDialogDemo() {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={handleClickOpen}>
-        Chat
-      </Button>
+      <IconButton onClick={handleClickOpen}>
+       <ChatBubbleIcon color="primary" fontSize="large" />
+      </IconButton>
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
   );

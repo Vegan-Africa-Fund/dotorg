@@ -4,7 +4,7 @@ html, body {
 
 #__next{
     min-height: 100%;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 a {

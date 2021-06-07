@@ -1,4 +1,4 @@
-import {AppBar, Typography, List, ListItem, Grid} from '@material-ui/core';
+import {AppBar, Typography, Grid, Box} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import SimpleDialogDemo from './Dialog'
 
@@ -6,6 +6,7 @@ const useStyles = makeStyles(theme => ({
     appBar: {
         top: 'auto',
         bottom: 0,
+        paddingRight: "1rem"
     },
     span: {
         fontWeight: 800
@@ -18,10 +19,8 @@ const useStyles = makeStyles(theme => ({
 
     list: {
         display: "flex",
-        justifyContent: "center",
-    },
-    listItem: {
-        padding: "0.2rem"
+        alignItems: "flex-end",
+        flexDirection: "column"
     },
 
     footer: {
@@ -37,11 +36,7 @@ const useStyles = makeStyles(theme => ({
     },
     chat: {
         display: "flex",
-        justifyContent: "flex-end",
-        padding: "0.5rem 0",
-        [theme.breakpoints.down('xs')]: {
-            paddingRight: "0.3rem"
-        }
+        justifyContent: "flex-end"
     },
     title: {
         padding: "0.8rem 0",
@@ -59,25 +54,23 @@ const useStyles = makeStyles(theme => ({
 const Footer = () => {
     const classes = useStyles();
     return (
-        <AppBar position="fixed" color="default" className = {classes.appBar}>
+        <AppBar position="static" color="default" className = {classes.appBar}>
             <Grid container>
-                <Grid item xs={4}>
+                <Grid className={classes.list} item xs={7}>
                 <Typography className={classes.title}>Vegan<span className={classes.span}>Africa</span>Fund © 2021</Typography>
-                </Grid>
-                <Grid className={classes.list} item xs={4}>
-                    <List className={classes.list}>
-                        <ListItem className={classes.listItem} component="a" href="https://veganafricafund.medium.com/" target="_blank">
+                <Box mr="2.5rem">
+                    <a href="https://veganafricafund.medium.com/" target="_blank">
                         <img className={classes.social} alt="medium" src="/images/medium.png" />
-                        </ListItem>
-                        <ListItem className={classes.listItem} component="a" href="https://twitter.com/veganafricafund?s=08" target="_blank">
+                    </a>
+                    <a href="https://veganafricafund.medium.com/" target="_blank">
                         <img className={classes.social} alt="twitter" src="/images/twitter.png" />
-                        </ListItem>
-                        <ListItem className={classes.listItem} component="a" href="https://www.instagram.com/veganafrica/?hl=en" target="_blank">
+                    </a> 
+                    <a href="https://veganafricafund.medium.com/" target="_blank">
                         <img className={classes.social} alt="instagram" src="/images/instagram.png" />
-                        </ListItem>
-                    </List>
+                    </a>
+                </Box>
                 </Grid>
-                <Grid className={classes.chat} item xs={4}>
+                <Grid className={classes.chat} item xs={5}>
                 <SimpleDialogDemo />
                 </Grid>
             </Grid>
