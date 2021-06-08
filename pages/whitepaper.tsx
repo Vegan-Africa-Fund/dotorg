@@ -89,15 +89,16 @@ const useStyles = makeStyles(theme => ({
     },
 
     imageDimensions: {
+            width: "620px",
+            height: "auto",
         [theme.breakpoints.down('xs')] : {
             width: "300px",
-            height: "auto"
         }
     },
 
     logo: {
-        width: "100px",
-        height: "100px",
+        width: "80px",
+        height: "80px",
         cursor: "pointer"
     }
 
@@ -192,7 +193,7 @@ const WhitePaper = () => {
                     <dd className={classes.dd}>
                         <Box display="flex">
                             <p>-</p>
-                            <p>DEX Launch Schedule for Vegan AF - Every quarter for 4 years (once every 3 months) unlocking less VAF per launch as time goes on, 70% of total VAF supply</p>
+                            <p>Exchange launch every quarter for 4 years, unlocking less VAF per launch as time goes by, 70% of total VAF supply</p>
                         </Box>
                     </dd>
                     <dt className={classes.dt}>
@@ -235,7 +236,7 @@ const WhitePaper = () => {
             <h2>TOKEN DISTRIBUTION</h2>
             <p>The schedule of unlocking dates for each of these sections outlined in the Roadmap below.</p>
             <Box display="flex" justifyContent="center">
-                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_6.png" />
+                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_6.jpg" />
             </Box>
             <h4 className={classes.caption}>Roadmap for Token Distribution</h4>
             <h4 className={classes.footer}>6</h4>
@@ -272,7 +273,7 @@ const WhitePaper = () => {
                 </dd>
             </dl>
             <h2>OPERATIONS STRATEGY</h2>
-            <p>As the vegan economy grows in Africa, Vegan AF will be at the forefront. Funds raised through the VAF token pre-sale and public sale will be allocated to the following funds: Partnership and Strategic Investment Fund, Technical and Platform Engineering Fund, Research and Development, Operations, Marketing, Social Impact Initiatives, and Legal. Investments made by Vegan AF into African businesses will result in Vegan AF acquiring shares of those companies, making up the Vegan AF portfolio. The investments will come with an option to purchase shares back at a later date, at an increased price. Share buyback funds will go back into the Vegan AF funds pool to support further investments in Vegan AF businesses.
+            <p>As the vegan economy grows in Africa, Vegan AF will be at the forefront. Funds raised through the VAF token pre-sale and public sale will be allocated to the following funds: Partnership and Strategic Acquisitions Fund, Technical and Platform Engineering Fund, Research and Development, Operations, Marketing, Social Impact Initiatives, and Legal. Investments made by Vegan AF into African businesses will result in Vegan AF acquiring shares of those companies, making up the Vegan AF portfolio. The investments will come with an option to purchase shares back at a later date, at an increased price. Share buyback funds will go back into the Vegan AF funds pool to support further investments in Vegan AF businesses.
             </p>
             <Box display="flex" justifyContent="center">
                 <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_7.png" />
@@ -283,7 +284,7 @@ const WhitePaper = () => {
             <Paper className={classes.paper}>
             <h2>OPERATIONS STRATEGY</h2>
             <p>
-                The Partnership and Strategic Investment Fund makes up the largest portion of the funds allocated from VAF sales. The fund includes support for high-growth operations as well as projects Vegan AF believes we can turn into high-growth operations.
+                The Partnership and Strategic Acquisitions Fund makes up the largest portion of the funds allocated from VAF sales. The fund includes support for high-growth operations as well as projects Vegan AF believes we can turn into high-growth operations.
             </p>
             <Box display="flex" justifyContent="center">
                 <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_8.png" />
@@ -296,7 +297,7 @@ const WhitePaper = () => {
             <Paper className={classes.paper}>
             <h2>TOKEN UNLOCKING</h2>
             <p>
-                The token release schedule involves minting 1 trillion VAF tokens during the network’s genesis transaction. These will immediately be divided into 5 separate holding wallets respective to the 5 functions: presale, public sale, liquidity, development team, and community development fund. The tokens will be unlocked given the below schedule, where at the time of unlocking they are sold (presale, public sale and liquidity) or allocated to the team or community.
+                The token release schedule involves minting 1 trillion VAF tokens during the network’s genesis transaction. These will immediately be divided into 5 separate holding wallets respective to the 5 functions: presale, public sale, liquidity, development team, and community development fund. The tokens will be unlocked given the below schedule, where at the time of unlocking they are available for sale (presale, public sale and liquidity) or allocated to the team or community.
             </p>
             <Box display="flex" justifyContent="center">
                 <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_10.png" />

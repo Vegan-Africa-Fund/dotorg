@@ -1,20 +1,24 @@
-import {AppBar, Typography, Grid, Box} from '@material-ui/core';
+import {AppBar, Typography, Grid, Box, Avatar} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import SimpleDialogDemo from './Dialog'
 
 const useStyles = makeStyles(theme => ({
     appBar: {
         top: 'auto',
         bottom: 0,
-        paddingRight: "1rem"
+        paddingRight: "1rem",
+        backgroundColor: "#88a283"
     },
     span: {
         fontWeight: 800
     },
 
     social: {
-        width: "24px",
-        height: "24px"
+        width: "30px",
+        height: "30px",
+        margin: "0 0.3rem 0.5rem 0.3rem"
     },
 
     list: {
@@ -36,7 +40,8 @@ const useStyles = makeStyles(theme => ({
     },
     chat: {
         display: "flex",
-        justifyContent: "flex-end"
+        justifyContent: "flex-end",
+        alignItems: "center"
     },
     title: {
         padding: "0.8rem 0",
@@ -58,15 +63,19 @@ const Footer = () => {
             <Grid container>
                 <Grid className={classes.list} item xs={7}>
                 <Typography className={classes.title}>Vegan<span className={classes.span}>Africa</span>Fund © 2021</Typography>
-                <Box mr="2.5rem">
+                <Box mr="2.5rem" display="flex">
                     <a href="https://veganafricafund.medium.com/" target="_blank">
-                        <img className={classes.social} alt="medium" src="/images/medium.png" />
+                        <Avatar className={classes.social} alt="medium" src="/images/medium.png" />
                     </a>
                     <a href="https://veganafricafund.medium.com/" target="_blank">
-                        <img className={classes.social} alt="twitter" src="/images/twitter.png" />
+                        <Avatar className={classes.social} alt="twitter">
+                            <TwitterIcon />
+                        </Avatar>
                     </a> 
                     <a href="https://veganafricafund.medium.com/" target="_blank">
-                        <img className={classes.social} alt="instagram" src="/images/instagram.png" />
+                        <Avatar className={classes.social} alt="instagram">
+                            <InstagramIcon />
+                        </Avatar>
                     </a>
                 </Box>
                 </Grid>

@@ -17,6 +17,12 @@ const useStyles = makeStyles({
   spacing: {
       padding: "1.5rem"
   },
+
+  chatIcon: {
+    color: "#f5f5f5",
+    width: "40px",
+    height: "40px"
+  }
 });
 
 export interface SimpleDialogProps {
@@ -64,6 +70,7 @@ function SimpleDialog(props: SimpleDialogProps) {
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+  const classes = useStyles();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -77,7 +84,7 @@ export default function SimpleDialogDemo() {
   return (
     <div>
       <IconButton onClick={handleClickOpen}>
-       <ChatBubbleIcon color="primary" fontSize="large" />
+       <ChatBubbleIcon className={classes.chatIcon} />
       </IconButton>
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
