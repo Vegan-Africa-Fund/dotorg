@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles';
 import {Box, Typography, Divider, Grid, Button} from '@material-ui/core';
 import { deepPurple } from '@material-ui/core/colors';
@@ -106,7 +107,7 @@ const useStyles = makeStyles(theme => ({
 
     span: {
         textDecoration: "underline",
-        color: "#88a283"
+        color: "#588bae"
     }
 }))
 
@@ -137,15 +138,17 @@ const Team = () => {
             </Grid>
         </Grid>
         <Box className={classes.founder}>
-            <img className={classes.ceoImage} alt="ceo" src="/images/Sunny.webp" />
+            <img className={classes.ceoImage} alt="ceo" src="/images/Sunny.jpg" />
             <Box className={classes.bodyContent}>
                 <Typography variant="h5">Sunny Satva</Typography>
                 <Typography variant="h6">Founder</Typography>
                 <Typography className={classes.statement} variant="body1">
-                I started Vegan AF while traveling around East Africa, hoping to make a positive impact in all of the places I went. One of my favorite ways to impactfully spend my money is by supporting businesses that are aligned with my ethics and vision for the future. While in Kenya, I realized that I don’t just want to buy from plant-based businesses - I want to help them scale their operations!
+                I began impact investing in vegan African companies in early 2021. One of my favorite ways to spend money is by supporting businesses which are aligned with my ethics and enabling my vision for the future. After meeting some amazing entrepreneurs in Kenya, I realized I don’t just want to buy from plant-based businesses - I also want to help them scale their operations!
                 {show ? (
                     <>
-                    <span> I began impact investing in early 2021 after seeing a huge need for start-up capital in African businesses. There are many amazing people spreading veganism on a local level, but at the same time there's a clear lack of vegan-centric investment here. It’s clear to me that achieving a more equitable future and enabling a thriving plant-based economy requires the transparency and decentralization provided by blockchain technology. I’m a social entrepreneur with a desire to shape a kind, beautiful future. I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 U.S. presidential campaign.</span>
+                    <span> There are many amazing ventures spreading veganism on local levels, and unfortunately there's a clear lack of vegan-centric impact investing across Africa. Vegan AF is working to fill this gap. Achieving a more equitable future and enabling a thriving plant-based economy requires transparency and decentralization which can be provided by blockchain technology. You can read more about the VAF impact token, created to support our operations,
+                    <span className={classes.span}><Link href="/white-paper">here</Link></span>.  I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 U.S. presidential campaign.
+                    </span>
                     <Box>
                         <Button onClick={handleLess} className={classes.showLess}>Show Less</Button>
                     </Box>
