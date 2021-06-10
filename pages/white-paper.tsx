@@ -242,7 +242,7 @@ const WhitePaper = () => {
             <h4 className={classes.footer}>6</h4>
             </Paper>
             <Paper className={classes.paper}>
-            <h2>OPERATIONS STRATEGY</h2>
+            <h2>DECENTRALIZED AUTONOMOUS ORGANIZATION (DAO)</h2>
             <dl>
                 <dt>
                     <p>The Vegan AF operations will be directed by the Development Team until 75% of the total VAF supply is unlocked, or 750 billion tokens. The projected unlock date for this amount will be Q3 2023, as shown in the roadmap above. At this time, key decision-making will be turned over to the DAO, where VAF holders receive proportional votes to the number of VAF they hold. The DAO will have the ability to vote on the following:</p>
