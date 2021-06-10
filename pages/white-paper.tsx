@@ -1,6 +1,7 @@
-import {Paper, Box} from '@material-ui/core'
+import {Paper, Box} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from 'next/link'
+import Link from 'next/link';
+import Head from 'next/head';
 
 const useStyles = makeStyles(theme => ({
     firstPaper: {
@@ -108,6 +109,13 @@ const useStyles = makeStyles(theme => ({
 const WhitePaper = () => {
     const classes = useStyles();
     return (
+        <>
+        <Head>
+         <title>White Paper | Vegan AF</title>
+         <meta charSet="utf-8" />
+         <link rel="shortcut icon" href="/images/veganLogo.ico" sizes="144x144"/>
+         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
         <section className={classes.section}>
             <Paper className={classes.firstPaper}>
                 <Box display="flex" justifyContent="center">
@@ -308,6 +316,7 @@ const WhitePaper = () => {
             <h4 className={classes.footer}>9</h4>
             </Paper>
         </section>
+        </>
     )
 }
 

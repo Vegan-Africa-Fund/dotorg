@@ -31,7 +31,7 @@ export interface SimpleDialogProps {
   onClose: (value: string) => void;
 }
 
-function SimpleDialog(props: SimpleDialogProps) {
+export function SimpleDialog(props: SimpleDialogProps) {
   const classes = useStyles();
   const { onClose, selectedValue, open } = props;
 

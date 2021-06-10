@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import Link from 'next/link'
+import React, {useState, useEffect} from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import {Box, Typography, Grid, Divider, IconButton} from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
-import CryptoButton from '../components/CryptoButton'
-import {buttons} from '../store/buttons'
-import database from '../firebase/firebase'
+import CryptoButton from '../components/CryptoButton';
+import {buttons} from '../store/buttons';
+import database from '../firebase/firebase';
 
 require('dotenv').config()
 
@@ -80,7 +81,13 @@ const Donate = () => {
     // }
 
     return (
-        <Box>
+        <>
+            <Head>
+            <title>Donate | Vegan AF</title>
+            <meta charSet="utf-8" />
+            <link rel="shortcut icon" href="/images/veganLogo.ico" sizes="144x144"/>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Box position= "relative" top="1rem" left="1rem" width="50%">
                 <Link href="/">
                     <IconButton className={classes.button} color="primary">
@@ -102,7 +109,7 @@ const Donate = () => {
            ))}
         </Grid>
         <Divider />
-        </Box>
+        </>
     )
 }
 

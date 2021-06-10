@@ -41,7 +41,7 @@ statement: {
 const CurrentProjects = () => {
   const classes = useStyles();
   return (
-    <Layout title="Projects | VeganAfrica">
+    <Layout title="Projects | Vegan AF">
       <Grid className={classes.titleGrid} container>
         <Grid item lg={5} md={4}>
                 <Divider className={classes.divider} />
