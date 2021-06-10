@@ -6,8 +6,6 @@ import SimpleDialogDemo from './Dialog'
 
 const useStyles = makeStyles(theme => ({
     appBar: {
-        top: 'auto',
-        bottom: 0,
         paddingRight: "1rem",
         backgroundColor: "#88a283"
     },

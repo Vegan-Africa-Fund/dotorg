@@ -135,6 +135,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
     </header>
     <Box
     mb="4rem"
+    flexGrow={1}
     >
     {children}
     </Box>
