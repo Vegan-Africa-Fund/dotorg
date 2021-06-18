@@ -2,6 +2,7 @@ import {AppBar, Typography, Grid, Box, Avatar} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import SimpleDialogDemo from './Dialog'
 
 const useStyles = makeStyles(theme => ({
@@ -14,15 +15,15 @@ const useStyles = makeStyles(theme => ({
     },
 
     social: {
-        width: "30px",
-        height: "30px",
+        width: "32px",
+        height: "32px",
         margin: "0 0.3rem 0.5rem 0.3rem"
     },
 
     list: {
         display: "flex",
         alignItems: "flex-end",
-        flexDirection: "column"
+        flexDirection: "column",
     },
 
     footer: {
@@ -61,7 +62,7 @@ const Footer = () => {
             <Grid container>
                 <Grid className={classes.list} item xs={7}>
                 <Typography className={classes.title}>Vegan<span className={classes.span}>Africa</span>Fund © 2021</Typography>
-                <Box mr="2.5rem" display="flex">
+                <Box display="flex">
                     <a href="https://veganafricafund.medium.com/" target="_blank">
                         <Avatar className={classes.social} alt="medium" src="/images/medium.png" />
                     </a>
@@ -73,6 +74,11 @@ const Footer = () => {
                     <a href="https://veganafricafund.medium.com/" target="_blank">
                         <Avatar className={classes.social} alt="instagram">
                             <InstagramIcon />
+                        </Avatar>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJicacUuK9qLrDW4BB1olcw">
+                        <Avatar className={classes.social} alt="youtube">
+                            <YouTubeIcon />
                         </Avatar>
                     </a>
                 </Box>

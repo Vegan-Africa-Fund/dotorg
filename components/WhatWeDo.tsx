@@ -34,7 +34,7 @@ const WhatWeDo = () => {
         <Box className={classes.container}>
             <Typography className={classes.title} align="center" variant="h2">What We Do</Typography>
             <Typography className={classes.body} variant="h6" align="center">
-            Vegan AF scales vegan businesses in Africa to make the plant-based evolution and education accessible to the fastest-growing continent on Earth.
+            Vegan AF scales vegan ventures in Africa to make the plant-based evolution and education accessible to the fastest-growing continent on Earth.
             </Typography>
         </Box>
     )

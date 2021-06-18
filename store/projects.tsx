@@ -5,7 +5,7 @@ export const projects = [{
     name: "Vegan Basket",
     index: "01",
     url: "https://www.google.com/maps/place/Vegan+Basket/@-3.6172264,39.872539,15z/data=!4m5!3m4!1s0x0:0x578e23198552f01f!8m2!3d-3.6172264!4d39.872539",
-    info: "Operating since 2019, Vegan Basket is based on the Kenya coast and has a mission of sharing delicious vegan food with Kenya! We are helping them scale their efforts to multiple locations, increase food production capacity and ability to provide their AMAZING vegan samosas to vendors along the coast, with an eventual vision of a vertically integrated farm-to-table operation that can be spread in a franchise model."
+    info: "Operating since 2019, Vegan Basket is based on the Kenya coast and has a mission of sharing delicious vegan food and educating the local community about veganism. We are helping them scale their efforts to increase food production capacity and manufacture vegan goods to provide to other vendors, restaurants, and grocery stores. We are working towards a vision of a vertically integrated veganic farm and food processing operation."
 },
 {
     id: uuidv4(),
@@ -18,7 +18,7 @@ export const projects = [{
     id: uuidv4(),
     name: "Blobject",
     index: "03",
-    url: "https://btcmission.org/",
+    url: "#",
     info: "Blobject is the technical services organisation that Vegan AF has partnered with to bring technical expertise and blockchain technology integrations to the Vegan AF platform. Our current project is creating a POS system that can be used for all Vegan AF partnered projects to manage inventory, accounting, orders, and payments, so that vegan African businesses are able to accept crypto payments, including payments in VAF."
 }
 ]
