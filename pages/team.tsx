@@ -137,7 +137,7 @@ const Team = () => {
                 <Divider className={classes.divider} />
             </Grid>
         </Grid>
-        <Box className={classes.founder}>
+            <Box className={classes.founder}>
             <img className={classes.ceoImage} alt="ceo" src="/images/Sunny.jpg" />
             <Box className={classes.bodyContent}>
                 <Typography variant="h5">Sunny Satva</Typography>
@@ -146,8 +146,8 @@ const Team = () => {
                 I began impact investing in vegan African companies in early 2021. One of my favorite ways to spend money is by supporting businesses which are aligned with my ethics and enabling my vision for the future. After meeting some amazing entrepreneurs in Kenya, I realized I don’t just want to buy from plant-based businesses - I also want to help them scale their operations!
                 {show ? (
                     <>
-                    <span> There are many amazing ventures spreading veganism on local levels, and unfortunately there's a clear lack of vegan-centric impact investing across Africa. Vegan AF is working to fill this gap. Achieving a more equitable future and enabling a thriving plant-based economy requires transparency and decentralization which can be provided by blockchain technology. You can read more about the VAF impact token, created to support our operations,
-                    <span className={classes.span}><Link href="/white-paper">here</Link></span>.  I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 U.S. presidential campaign.
+                    <span> There are many amazing ventures spreading veganism on local levels, and unfortunately there's a clear lack of vegan-centric impact investing across Africa. Vegan AF is working to fill this gap. Achieving a more equitable future and enabling a thriving plant-based economy requires transparency and decentralization which can be provided by blockchain technology. 
+                        You can read more about the VAF impact token, created to support our operations, <span className={classes.span}><Link href="/white-paper">here</Link></span>.  I previously worked as an outreach director for the New York Public Interest Research Group (NYPIRG) and the Andrew Yang 2020 U.S. presidential campaign.
                     </span>
                     <Box>
                         <Button onClick={handleLess} className={classes.showLess}>Show Less</Button>
@@ -157,15 +157,17 @@ const Team = () => {
                     <Button onClick={handleMore} className={classes.showMore}>Read More</Button>
                 )}
                 </Typography>
-        </Box>
-        </Box>
-        <Divider />
+            </Box>
+            </Box>
+            <Divider />
             <Box className={classes.employee}>
                 <img className={classes.employeeImage} alt="marketing-head" src="/images/Wendy.webp" />
                 <Box className={classes.bodyContent}>
                     <Typography variant="h5">Wendy Matheka</Typography>
                     <Typography variant="h6">Head of Digital</Typography>
-                    <Typography className={classes.statement} variant="body1">I create content, manage social media, and manage the overall digital presence of Vegan AF. I got involved because I’m passionate about veganism, and creating awareness is the first step to lasting change. We live on a meat-centric continent and I'm excited to be part of the solution. I'm passionate about helping create the  platform, society and community that I needed for support when I went vegan. I hope to see a more compassionate, conscious Africa and world where we live more sustainably, respect life and our planet and improve the world for the generations to come.</Typography>
+                    <Typography className={classes.statement} variant="body1">I create content, manage social media, and manage the overall digital presence of Vegan AF. I got involved because I’m passionate about veganism, and creating awareness is the first step to lasting change. 
+                    We live on a meat-centric continent and I'm excited to be part of the solution. I'm passionate about helping create the  platform, society and community that I needed for support when I went vegan. 
+                    I hope to see a more compassionate, conscious Africa and world where we live more sustainably, respect life and our planet and improve the world for the generations to come.</Typography>
                 </Box>
             </Box>
         <Divider />
@@ -175,9 +177,24 @@ const Team = () => {
                 <Typography variant="h5">Ezra Fesihatsion</Typography>
                 <Typography variant="h6">Advisor</Typography>
                 <Typography className={classes.statement} variant="body1">
-                I was born in Addis Ababa, Ethiopia, where I attended business school and currently live. In 2011, I vowed to stop consuming and using animal products and joined the vegan movement. I began operating a 100% vegan restaurant in 2015 to serve vegan and non-vegan guests in Addis Ababa while promoting veganism to society at large. I am advising Vegan AF on operations and strategies, as I have helped many people on their plant-based journey and am aligned with the ultimate mission of making more vegans in the world. I began my vegan journey by exploring spiritual and philosophical teachings, and am especially inspired by <span className={classes.span}><a href="https://suprememastertv.com/en1/">Supreme Master Ching Hai’s television network</a></span> which promotes vegan and sustainable living, compassion, and ultimately enlightenment.
+                I was born in Addis Ababa, Ethiopia, where I attended business school and currently live. In 2011, I vowed to stop consuming and using animal products and joined the vegan movement. 
+                I began operating a 100% vegan restaurant in 2015 to serve vegan and non-vegan guests in Addis Ababa while promoting veganism to society at large. 
+                I am advising Vegan AF on operations and strategies, as I have helped many people on their plant-based journey and am aligned with the ultimate mission of making more vegans in the world. 
+                I began my vegan journey by exploring spiritual and philosophical teachings, and am especially inspired by <span className={classes.span}><a href="https://suprememastertv.com/en1/">Supreme Master Ching Hai’s television network</a></span> which promotes vegan and sustainable living, compassion, and ultimately enlightenment.
                 </Typography>
                 </Box>
+            </Box>
+            <Divider />
+            <Box className={classes.employee}>
+            <img className={classes.employeeImage} alt="ambassador" src="/images/Bingo.jpg" />
+            <Box className={classes.bodyContent}>
+                <Typography variant="h5">Bingo Mwaveka</Typography>
+                <Typography variant="h6">Vegan AF Ambassador</Typography>
+                <Typography className={classes.statement} variant="body1">I'm a recent convert and believer in the vegan movement. My 117-year-old grandmother has been vegan all her life, and I always admired her for that; now I understand the benefits. I am a professional kickboxer and a second dan international blackbelt in Taekwondo, and I am dedicated to teaching young vulnerable girls how to defend themselves, empowering them by using the strong discipline instilled by martial arts. 
+                I was shocked to discover the protein lie, that meat was a necessary part of every athlete's diet, and have since adopted a plant based diet. Not only has my training improved, but I have increased focus, more endurance, higher stamina and more energy. 
+                I am now a champion in my community on the Kenya coast, spreading the word about veganism and getting more and more athletes on board with a sustainable clean lifestyle. 
+                I am also working with Current Education as a Human Kinetics and Physical Education guide to several students who have their eyes set on Olympic gold.</Typography>
+            </Box>
             </Box>
         </Layout>
     )
