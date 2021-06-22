@@ -2,6 +2,7 @@ import {Paper, Box} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 import Head from 'next/head';
+import DeforestationChart from '../components/DeforestationChart';
 
 const useStyles = makeStyles(theme => ({
     firstPaper: {
@@ -151,7 +152,7 @@ const WhitePaper = () => {
                 Rainforests in Congo and throughout Africa are being slashed for industrial and agricultural expansion. Animal agriculture is largely responsible for the rapid depletion of resources that could otherwise be used to end world hunger <span className={classes.span}><a href="https://www.cifor.org/publications/pdf_files/OccPapers/OP-144.pdf">(Tchatchou et. al)</a></span>.
             </p>
             <Box display="flex" justifyContent="center">
-                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_4.png" />
+               <DeforestationChart />
             </Box>
             <Box textAlign="center">
             <h4 className={classes.span}><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/65505/6316-drivers-deforestation-report.pdf">Causes of Deforestation in the Congo Rainforest</a></h4>
