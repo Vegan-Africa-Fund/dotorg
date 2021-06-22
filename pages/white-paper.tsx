@@ -3,7 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 import Head from 'next/head';
 import DeforestationChart from '../components/DeforestationChart';
-
+import PopulationPredictions from '../components/PopulationPredictions';
+import FundsPie from '../components/FundsPie';
+import TokenPie from '../components/TokenPie';
+import OperationPie from '../components/OperationPie';
+import TokenReleaseStep from '../components/TokenReleaseStep';
 const useStyles = makeStyles(theme => ({
     firstPaper: {
         width: "60%",
@@ -124,7 +128,7 @@ const WhitePaper = () => {
             <Paper className={classes.paper}>
                 <h3>Tokenomics Summary</h3>
                 <p>
-                The Vegan Africa Fund (Vegan AF) is sustainably scaling vegan ventures in Africa in a decentralized manner. VAF is the native token of the Vegan AF network, serving as an impact token enabling co-operation of vegan individuals and businesses through the VAF token economy. Purchasing VAFs allows Vegan AF to strategically acquire, hold, assist, and form companies aligned with our mission. Vegan AF acts as a vegan impact fund, with operations focused on helping vegan companies succeed. For every 10 VAFs purchased, 1 VAF will be distributed to the Community Development Fund or as part of the Vegan AF rewards program. As the Vegan AF network expands, VAF tokens can be redeemed for products, services, experiences and delicious vegan food from partnered operations. The VAF token provides proof of impact, where the token usage can be tied to sustainable operations in Africa and our increasing share in the growing value of the vegan economy. VAF tokens will grow in value as the companies Vegan AF supports grow in value. Our mission is to make plant-based options plentiful, delicious, local, and sustainable, while making the plant-based evolution accessible to the fastest-growing continent on Earth.  
+                The Vegan Africa Fund (Vegan AF) is sustainably scaling vegan ventures in Africa in a decentralized manner. VAF is the native token of the Vegan AF network, serving as an impact token enabling co-operation of vegan individuals and businesses through the VAF token economy. Purchasing VAFs allows Vegan AF to strategically acquire, hold, assist, and form companies aligned with our mission. Vegan AF acts as a vegan impact fund, with operations focused on helping vegan companies succeed. For every 10 VAFs purchased, 1 VAF will be distributed to the Community Development Fund or as part of the Vegan AF rewards program. As the Vegan AF network expands, VAF tokens can be redeemed for products, services, experiences and delicious vegan food from partnered operations. The VAF token provides proof of impact, where the token usage can be tied to sustainable operations in Africa and our increasing share in the growing value of the vegan economy. VAF tokens will grow in value as the companies Vegan AF supports grow in value. Our mission is to make plant-based options plentiful, delicious, local, and sustainable, while making the plant-based evolution accessible to the fastest-growing continent on Earth.
                 </p>
                 <Box display="flex" justifyContent="center">
                 <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_2.png" />
@@ -139,7 +143,7 @@ const WhitePaper = () => {
                 That's a lot more people to feed; in fact, Africa is growing faster than any other continent. How we increase food production must be rooted in regeneration instead of destruction, especially encouraging food forests to regenerate the earth.
                 </p>
                 <Box display="flex" justifyContent="center">
-                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_3.png" />
+                   <PopulationPredictions />
                 </Box>
                 <Box textAlign="center">
                 <h4 className={classes.span}><a href="https://ourworldindata.org/future-population-growth">Current Population Vs. Projected Population By Continent</a></h4>
@@ -171,7 +175,7 @@ const WhitePaper = () => {
                 <p>Vegan AF invests in plant-based African companies. The purchase of VAF tokens provides critical expansion and start-up capital to vegan and sustainable businesses in Africa. We're operating as a social enterprise and creating a circular vegan economy to benefit society, the environment, and improve how people do business. Vegan AF is for conscious profit, where emphasis is on making and empowering more vegans and scaling vegan ventures, not a business centered on solely profits.</p>
                 <p>All profits, from token sales or from the result of the ventures we partner with profiting, cycle into the vegan AF funds pool. This allows us to build a sustainable circular economy instead of relying solely on token sales to support our efforts.</p>
                 <Box display="flex" justifyContent="center">
-                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_7.svg" />
+                   <FundsPie />
                 </Box>
                 <h4 className={classes.caption}>Vegan AF Funds Distribution</h4>
                 <h4 className={classes.footer}>4</h4>
@@ -186,7 +190,7 @@ const WhitePaper = () => {
             <Paper className={classes.paper}>
                 <h2>TOKEN DISTRIBUTION</h2>
                 <Box display="flex" justifyContent="center">
-                    <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_5.svg" />
+                   <TokenPie />
                 </Box>
                 <h4 className={classes.caption}>VAF Token Allocation</h4>
                 <dl>
@@ -288,7 +292,7 @@ const WhitePaper = () => {
             <p>As the vegan economy grows in Africa, Vegan AF will be at the forefront. Funds raised through the VAF token pre-sale and public sale will be allocated to the following funds: Partnership and Strategic Acquisitions Fund, Technical and Platform Engineering Fund, Research and Development, Operations, Marketing, Social Impact Initiatives, and Legal. Investments made by Vegan AF into African businesses will result in Vegan AF acquiring shares of those companies, making up the Vegan AF portfolio. The investments will come with an option to purchase shares back at a later date, at an increased price. Share buyback funds will go back into the Vegan AF funds pool to support further investments in Vegan AF businesses.
             </p>
             <Box display="flex" justifyContent="center">
-                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_7.svg" />
+               <OperationPie />
             </Box>
             <h4 className={classes.caption}>Vegan AF Funds Distribution</h4>
             <h4 className={classes.footer}>8</h4>
@@ -312,7 +316,7 @@ const WhitePaper = () => {
                 The token release schedule involves minting 1 trillion VAF tokens during the network’s genesis transaction. These will immediately be divided into 5 separate holding wallets respective to the 5 functions: presale, public sale, liquidity, development team, and community development fund. The tokens will be unlocked given the below schedule, where at the time of unlocking they are available for sale (presale, public sale and liquidity) or allocated to the team or community.
             </p>
             <Box display="flex" justifyContent="center">
-                <img alt="whitepaper" className={classes.imageDimensions} src="/images/whitepaper_10.svg" />
+               <TokenReleaseStep />
             </Box>
             <h4 className={classes.caption}>VAF 4-Year Token Unlocking Schedule</h4>
             <h2>DONATING TO VEGAN AF</h2>
@@ -325,4 +329,3 @@ const WhitePaper = () => {
 }
 
 export default WhitePaper
-
