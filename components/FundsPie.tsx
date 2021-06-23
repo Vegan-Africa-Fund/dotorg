@@ -31,7 +31,7 @@ const DeforestationChart = () => {
         <>
         <Doughnut
         type="Doughnut"
-        height={350}
+        height={150}
         data = {chartData}
         options={{
             title: {

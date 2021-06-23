@@ -69,7 +69,7 @@ const DeforestationChart = () => {
         <>
         <Line
         type="Step"
-        height={350}
+        height={150}
         data = {chartData}
         options={{
           indexAxis: 'x',

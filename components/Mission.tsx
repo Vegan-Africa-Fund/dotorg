@@ -9,8 +9,8 @@ const useStyles = makeStyles(theme => ({
         fontSize: "1.5rem",
         padding: "0.75rem 0",
         fontFamily: "FuturaLight",
-        textShadow: "0.5px 0.5px 0.5px #000, 0 0 0.3em #fff, 0 0 0.2em #000",
-        color: "#fff",
+        textShadow: "0.5px 0.5px 0.5px #000, 0 0 0.3em #f8fff7, 0 0 0.2em #000",
+        color: "#f8fff7",
         [theme.breakpoints.down('sm')] : {
             fontSize: "1.2rem",
             width: "100%"

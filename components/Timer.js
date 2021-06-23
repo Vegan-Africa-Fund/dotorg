@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
         '& section': {
             width: "10%",
             backgroundColor: "#696969",
-            color: "#fff",
+            color: "#f8fff7",
             '& p:first-child': {
                 margin: "0.5rem 0",
                 fontSize: "2.5rem",

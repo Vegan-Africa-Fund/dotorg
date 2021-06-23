@@ -1,5 +1,9 @@
 html, body {
-    height: 100%
+    height: 100%;
+
+}
+.MuiPaper-root{
+  background-color: #FFF!important
 }
 
 #__next{
