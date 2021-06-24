@@ -1,9 +1,7 @@
-import {Paper, Box} from '@material-ui/core';
+import {Paper} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from 'next/link';
 import Head from 'next/head';
-import DeforestationChart from '../components/DeforestationChart';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const useStyles = makeStyles(theme => ({
     firstPaper: {

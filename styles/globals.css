@@ -2,9 +2,9 @@ html, body {
     height: 100%;
 
 }
-.MuiPaper-root{
+/* .MuiPaper-root{
   background-color: #FFF!important
-}
+} */
 
 #__next{
     min-height: 100vh;
@@ -45,7 +45,7 @@ a {
 
 @font-face {
     font-family: "FuturaMediumItalic";
-    src: url("/fonts/futuraMediumItalic.ttf")
+    src: url("/fonts/FuturaMediumItalic.ttf")
 }
 
 @font-face {
