@@ -4,7 +4,7 @@ module.exports= {
         "RECAPTCHA_SITE_KEY": "6LduxtsaAAAAANMCMqw3INxLfmVZyE2dB8uI1_7M",
         "RECAPTCHA_SECRET_KEY": "6LduxtsaAAAAAMet8Nf4KUdZGmurIz6uxXliHzEJ"
     },
-
+    webpack5: false,
     webpack: (config) => {
         return {
           ...config,
