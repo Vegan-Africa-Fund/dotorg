@@ -39,7 +39,7 @@ const DeforestationChart = () => {
         <>
         <Bar
         type="Bar"
-        height={300}
+        height={250}
         data = {chartData}
         options={{
           indexAxis: 'x',

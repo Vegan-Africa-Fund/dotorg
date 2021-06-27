@@ -7,11 +7,11 @@ const DeforestationChart = () => {
 
     useEffect(() => {
         setChartData({
-          labels: ['Legal', 'Marketing', 'Social Impact', 'Operations', 'R&D','Tech Eng','Acquisitions'],
+          labels: ['Acquisitions', 'Social Impact','Resources','Operations','Marketing','Legal' ],
             datasets: [
               {
                 label: '%',
-                data: [2.5,2.5,5,5,15,20,50],
+                data: [75,10,5,5,2.5,2.5],
                 backgroundColor:[
                   "#F1932D",
                   "#BA8DB4",

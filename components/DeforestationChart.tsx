@@ -53,7 +53,7 @@ const DeforestationChart = () => {
         <>
         <Bar
         type="Bar"
-        height={400}
+        height={250}
         data = {chartData}
         options={{
             scales: {

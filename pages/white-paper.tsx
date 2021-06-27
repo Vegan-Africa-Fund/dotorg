@@ -10,7 +10,8 @@ import OperationPie from '../components/OperationPie';
 import TokenReleaseStep from '../components/TokenReleaseStep';
 const useStyles = makeStyles(theme => ({
     firstPaper: {
-        width: "60%",
+        width: "90%",
+        maxWidth: "90vh",
         margin: "1.5rem auto",
         padding: "3rem 6rem 6rem 6rem",
         [theme.breakpoints.down('xs')] : {
@@ -19,7 +20,8 @@ const useStyles = makeStyles(theme => ({
         }
     },
     paper: {
-        width: "60%",
+        width: "90%",
+        maxWidth: "90vh",
         margin: "1.5rem auto",
         padding: "6rem",
         [theme.breakpoints.down('xs')] : {
@@ -233,7 +235,7 @@ const WhitePaper = () => {
                     <dd className={classes.dd}>
                         <Box display="flex">
                             <p>-</p>
-                            <p>A portion of VAF tokens is unlocked every quarter and distributed to the Vegan AF development team, 6.5% of total VAF supply</p>
+                            <p>A portion of VAF tokens is unlocked every quarter and distributed to the Vegan AF development team, 2.3% of total VAF supply</p>
                         </Box>
                     </dd>
                     <dt className={classes.dt}>
@@ -242,7 +244,7 @@ const WhitePaper = () => {
                     <dd className={classes.dd}>
                         <Box display="flex">
                             <p>-</p>
-                            <p>Vegan AF reserves a portion of VAF tokens to sell on exchanges if there is a higher demand than available tokens during that sale stage, 10% of total VAF supply</p>
+                            <p>Vegan AF reserves a portion of VAF tokens to sell and buy VAF on exchanges to make the market more liquid, 4.3% of total VAF supply</p>
                         </Box>
                     </dd>
                 </dl>
