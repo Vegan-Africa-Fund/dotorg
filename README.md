@@ -19,8 +19,8 @@
 - ```cd htdocs/veganAfrica/ ```
 - ```pm2 stop all```
 - ```git pull origin main ```
-- ```export NODE_OPTIONS=--max_old_space_size=7096```
-- ``` npm run build ```
+- ```export NODE_OPTIONS=--max_old_space_size=7096```- (Note: You have to run this anytime you have to run npm build).
+- ``` npm run build ``` 
 - ```  pm2 start npm -- start ```
 
 
