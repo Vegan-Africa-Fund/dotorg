@@ -14,6 +14,14 @@
 
 - To deploy changes run ```npx serverless```.
 
+## Deploy on aws lightsail
+#### Run the following steps in that order.
+- ```pm2 stop all```
+- ```git pull origin main ```
+- ```export NODE_OPTIONS=--max_old_space_size=7096```
+- ``` npm run build ```
+- ```  pm2 start npm -- start ```
+
 
 ## Todos and Questions
   - what's this? 34s › nextJsApp › CredentialsError: Missing credentials in config, if using AWS_CONFIG_FILE, set AWS_SDK_LOAD_CONFIG=1 <on npx serverless
