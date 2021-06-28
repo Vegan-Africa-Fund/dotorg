@@ -16,6 +16,7 @@
 
 ## Deploy on aws lightsail
 #### Run the following steps in that order.
+- ```cd htdocs/veganAfrica/ ```
 - ```pm2 stop all```
 - ```git pull origin main ```
 - ```export NODE_OPTIONS=--max_old_space_size=7096```
