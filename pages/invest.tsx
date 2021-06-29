@@ -1,8 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
-import {IconButton, Box, Button} from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
+import { Box, Button} from '@material-ui/core';
+// import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
 import {SimpleDialog} from '../components/Dialog';
@@ -40,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     const handleClickOpen = () => {
         setOpen(true);
       };
-    
+
       const handleClose = (value: string) => {
         setOpen(false);
         setSelectedValue(value);
@@ -53,13 +52,7 @@ const useStyles = makeStyles(theme => ({
         <link rel="shortcut icon" href="/images/veganLogo.ico" sizes="144x144"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Box position= "relative" top="1rem" left="1rem" width="50%">
-            <Link href="/">
-                <IconButton className={classes.button} color="primary">
-                    <CloseIcon />
-                </IconButton>
-            </Link>
-        </Box>
+
         <Box
         className = {classes.page}>
         <h1>Due to international regulations we need to verify some information before you can participate in the pre-sale.</h1>

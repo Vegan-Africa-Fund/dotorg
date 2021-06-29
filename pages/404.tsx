@@ -9,7 +9,7 @@ import styles from '../styles/404.module.css'
     mx="auto"
     className = {styles.page}>
 
-    <p>We moved to our homepage to VeganAfricaFund.com for now! Click below:</p>
+    <p>We moved our homepage to VeganAfricaFund.com </p><p> Click below:</p>
     <hr />
     <Link href="https://veganafricafund.com">
         <Button className={styles.button} variant="outlined" color="primary">Visit Vegan AF's new site!</Button>

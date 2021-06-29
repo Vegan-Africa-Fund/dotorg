@@ -2,3 +2,53 @@
   color: "#88a283";
   text-decoration: "underline";
 }
+.page {
+    position: relative;
+    top: 3rem;
+}
+
+.logo{
+  z-index: -10;
+  width: 50%;
+  position: relative;
+  padding-top: 0rem;
+  margin: 0 0 25% 25%;
+}
+
+.button{
+  margin-top: 10rem;
+  position: absolute;
+  width: 100%;
+  margin: 0.25rem;
+  color: white!important;
+  font-size: 1.6rem!important;
+  /* background: linear-gradient(202deg, #14ad85, #67b6d8, #9498fa); */
+  background: linear-gradient(202deg,
+                    #7BBCE7,
+                    #9BD2E1,
+                    #9398D2,
+                    #9A709E,
+                    #9BD2E1,
+                    #7BBCE7);
+      background-size: 1000% 1000%;
+
+      -webkit-animation: AnimationName 9s ease infinite;
+      -moz-animation: AnimationName 9s ease infinite;
+      animation: AnimationName 9s ease infinite;
+  }
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:9% 0%}
+      50%{background-position:92% 100%}
+      100%{background-position:9% 0%}
+  }

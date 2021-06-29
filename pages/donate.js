@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import {Box, Typography, Grid, Divider, IconButton} from '@material-ui/core'
-import CloseIcon from '@material-ui/icons/Close';
+// import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 import CryptoButton from '../components/CryptoButton';
 import {buttons} from '../store/buttons';
@@ -33,14 +32,14 @@ const useStyles = makeStyles(theme => ({
     title: {
         [theme.breakpoints.down('sm')] : {
             marginTop: "2rem"
-          } 
+          }
     },
 
     instructionsBox: {
         width: "50%",
         margin: "1rem auto 0 auto",
         [theme.breakpoints.down('xs')] : {
-           width: "95%" 
+           width: "95%"
         }
     }
 }))
@@ -88,13 +87,7 @@ const Donate = () => {
             <link rel="shortcut icon" href="/images/veganLogo.ico" sizes="144x144"/>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <Box position= "relative" top="1rem" left="1rem" width="50%">
-                <Link href="/">
-                    <IconButton className={classes.button} color="primary">
-                        <CloseIcon />
-                    </IconButton>
-                </Link>
-            </Box>
+
         <Typography className={classes.title} variant="h4" align="center">Donate to the Vegan Africa Fund</Typography>
         <Box className={classes.instructionsBox}>
         <Typography variant="body2" component="p" align="center">Donate digital currency tokens to Vegan AF by clicking the icon representing the cryptocurrency of your choice, and copying our deposit address which comes up.</Typography>
