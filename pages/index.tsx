@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import Email from '../components/Email';
 import Mission from '../components/Mission';
-import Timer from '../components/Timer';
 import Statement from '../components/Statement';
 import WhatWeDo from '../components/WhatWeDo';
 import Letter from '../components/Letter';
