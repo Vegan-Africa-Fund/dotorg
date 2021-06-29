@@ -4,14 +4,18 @@ import styles from '../styles/404.module.css'
 
  const Custom404 = () => {
      return (
-    <Box 
-    width="50%" 
-    mx="auto" 
+    <Box
+    width="50%"
+    mx="auto"
     className = {styles.page}>
-    <h1>404 | Page Not Found.</h1>
-    <Link href="/">
-        <Button variant="outlined" color="primary">Go home</Button>
+
+    <p>We moved to our homepage to VeganAfricaFund.com for now! Click below:</p>
+    <hr />
+    <Link href="https://veganafricafund.com">
+        <Button className={styles.button} variant="outlined" color="primary">Visit Vegan AF's new site!</Button>
       </Link>
+      <hr />
+      <img alt="vegan" className={styles.logo} src="/images/veganLogo.png" />
     </Box>
 )}
 
