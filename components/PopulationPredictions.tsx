@@ -7,7 +7,7 @@ const DeforestationChart = () => {
 
     useEffect(() => {
         setChartData({
-            labels: ['Africa','Asia','Elsewhere'],
+            labels: ['Africa','Asia','Americas & Europe'],
             datasets: [
               {
                   label: "2021",
