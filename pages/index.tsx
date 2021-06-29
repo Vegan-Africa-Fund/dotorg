@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     padding: "1.5rem 0",
     [theme.breakpoints.down('xs')] : {
       padding: "0.5rem 0"
-    } 
+    }
   },
 
   dialog: {
@@ -81,11 +81,6 @@ const IndexPage = () => {
         <Grid item xs={12}>
           <Paper className={classes.statement} elevation={0}>
             <WhatWeDo />
-          </Paper>
-        </Grid>
-        <Grid item xs={12}>
-          <Paper className={classes.timer} variant="outlined" square>
-            <Timer />
           </Paper>
         </Grid>
         <Grid item xs={12}>
